@@ -1,0 +1,71 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /Resources << /Font << /F1 4 0 R >> >> /MediaBox [0 0 612 792] /Contents 5 0 R >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+5 0 obj
+<< /Length 1623 >>
+stream
+BT
+/F1 20 Tf
+50 720 Td
+(DORIAN JOAQUIN FLORES BURGOA - CV) Tj
+0 -30 Td
+/F1 12 Tf
+(Ingeniero Informatico | Web Dev, Cybersecurity y QA Specialist) Tj
+0 -25 Td
+(Email: dorianjfb01@gmail.com | Tel: +591 78310899 | GitHub: github.com/LUCKYTANO765) Tj
+0 -40 Td
+/F1 14 Tf
+(EXPERIENCIA Y PROYECTOS DESTACADOS) Tj
+0 -20 Td
+/F1 10 Tf
+(- SuperCasino365: Plataforma de casino virtual con Blackjack, Go backend, y test QA automatizados con Playwright.) Tj
+0 -15 Td
+(- Tower Auditoria: Juego de fisicas interactivo con React y Matter.js. Incluye un modo auditoria para validaciones.) Tj
+0 -15 Td
+(- MortalSoft Casino Suite: Tragamonedas y Crash desarrollado con logica probabilistica y Canvas.) Tj
+0 -15 Td
+(- Century 21 Job Automator: Automatizacion de flujos de reclutamiento en n8n de forma autonoma.) Tj
+0 -15 Td
+(- Local LLM Orchestrator: Despliegue privado de modelos de lenguaje con agentes inteligentes (LM Studio).) Tj
+0 -15 Td
+(- Control Parental Game Suite: Restriccion dinamica de tiempo en pantalla y accesos acoplados a juegos educativos.) Tj
+0 -15 Td
+(- MediCare y Deportes Portal: Landing pages de alta conversion y portales deportivos en React/TS.) Tj
+0 -30 Td
+/F1 14 Tf
+(HABILIDADES CLAVE) Tj
+0 -20 Td
+/F1 10 Tf
+(- Ciberseguridad: Pentesting, Investigaciones OSINT, Informatica Forense, SAST/DAST) Tj
+0 -15 Td
+(- Desarrollo Web: React, Vite, Node.js, Go (Golang), APIs REST, HTML5, CSS3, Docker) Tj
+0 -15 Td
+(- IA y Agentes: Orquestacion con Antigravity, Claude, Prompt Engineering, Modelos locales) Tj
+0 -15 Td
+(- QA y Automatizacion: Playwright, Jest, Test-Driven Development (TDD), Integracion Continua CI/CD) Tj
+ET
+endstream
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000241 00000 n 
+0000000311 00000 n 
+trailer
+<< /Size 6 /Root 1 0 R >>
+startxref
+1986
+%%EOF
