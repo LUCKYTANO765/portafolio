@@ -2,6 +2,8 @@
 .DS_Store
 Thumbs.db
 desktop.ini
+*.zip
+*.rar
 
 # IDE/Editors
 .vscode/

@@ -1,742 +1,242 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title data-en="Computer Engineer Portfolio | Cybersecurity, IA and QA">Portafolio de Ingeniero Informático | Ciberseguridad, IA y QA</title>
-  <meta name="description" content="Portafolio premium. Especialista en Ciberseguridad, automatización de QA y desarrollo de Agentes de IA con Claude y Antigravity.">
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-en="Dorian Flores · Full-Stack Software Engineer — React, Go & Node.js">Dorian Flores · Ingeniero de Software Full-Stack — React, Go y Node.js</title>
+<meta name="description" content="Portafolio premium. Ingeniero de Software Full-Stack especializado en React, Node.js, Go, PostgreSQL y monorepos en tiempo real.">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Ambient Light Orbs -->
-  <div class="glow-orb" id="orb-1"></div>
-  <div class="glow-orb" id="orb-2"></div>
+<!-- Ambient layers -->
+<div class="aurora"><span class="a1"></span><span class="a2"></span><span class="a3"></span></div>
+<div class="grain"></div>
+<div class="cursor-glow" id="cursorGlow"></div>
+<div class="scroll-bar" id="scrollBar"></div>
 
-  <!-- NAVIGATION HEADER -->
-  <header class="header">
-    <div class="container nav-container">
-      <a href="#inicio" class="logo" id="nav-logo">
-        <span class="logo-symbol">&lt;</span>PORTAFOLIO<span class="logo-symbol">/&gt;</span>
-      </a>
-
-      <div class="menu-toggle" id="mobile-menu-btn">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <line x1="3" y1="12" x2="21" y2="12"></line>
-          <line x1="3" y1="6" x2="21" y2="6"></line>
-          <line x1="3" y1="18" x2="21" y2="18"></line>
-        </svg>
-      </div>
-
-      <ul class="nav-links" id="nav-menu">
-        <li><a href="#inicio" class="nav-link active" data-en="Home">Inicio</a></li>
-        <li><a href="#pilares" class="nav-link" data-en="Expertise">Especialidades</a></li>
-        <li><a href="#habilidades" class="nav-link" data-en="Skills">Habilidades</a></li>
-        <li><a href="#proyectos" class="nav-link" data-en="Projects">Proyectos</a></li>
-        <li><a href="#trayectoria" class="nav-link" data-en="Timeline">Trayectoria</a></li>
-        <li><a href="#contacto" class="nav-link" data-en="Contact">Contacto</a></li>
-        <li><button id="lang-switch-btn" class="btn-lang" title="Cambiar idioma / Change language">EN</button></li>
-        <li><button id="theme-switch-btn" class="btn-theme" title="Cambiar tema / Toggle theme">☼</button></li>
-      </ul>
+<!-- HEADER -->
+<header class="header" id="header">
+  <div class="container nav">
+    <a href="#inicio" class="logo"><span class="sym">&lt;</span>DFB<span class="sym">/&gt;</span></a>
+    <div class="burger" id="burger">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
     </div>
-  </header>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#inicio" class="nav-link active" data-en="Home">Inicio</a></li>
+      <li><a href="#pilares" class="nav-link" data-en="Expertise">Especialidades</a></li>
+      <li><a href="#habilidades" class="nav-link" data-en="Skills">Habilidades</a></li>
+      <li><a href="#proyectos" class="nav-link" data-en="Projects">Proyectos</a></li>
+      <li><a href="#trayectoria" class="nav-link" data-en="Timeline">Trayectoria</a></li>
+      <li><a href="#contacto" class="nav-link" data-en="Contact">Contacto</a></li>
+      <li><button class="chip" id="langBtn">EN</button></li>
+      <li><button class="chip" id="themeBtn">☼</button></li>
+    </ul>
+  </div>
+</header>
 
-  <!-- HERO SECTION -->
-  <section class="hero-section" id="inicio">
-    <canvas id="hero-canvas"></canvas>
-    <div class="container">
-      <div class="hero-grid">
-        <div class="hero-content reveal-up active">
-          <div class="hero-tagline" data-en="Engineering the Future">Ingeniería del Futuro</div>
-          <h1 class="hero-title gradient-text" data-en="Building Systems <br><span class='gradient-ai'>Secure, Intelligent</span> <br>and Guaranteed.">
-            Construyendo Sistemas <br>
-            <span class="gradient-ai">Seguros, Inteligentes</span> <br>
-            y Garantizados.
-          </h1>
-          <p class="hero-description" data-en="<strong>Computer Engineer</strong> specializing in <strong>Cybersecurity</strong>, <strong>AI Agent orchestration (Claude and Antigravity)</strong>, and <strong>QA Automation workflows</strong>. I defend infrastructure, automate code development, and ensure software quality.">
-            <strong>Ingeniero Informático</strong> especialista en <strong>Ciberseguridad</strong>, orquestación de <strong>Agentes de IA (Claude y Antigravity)</strong>, y diseño de flujos de <strong>QA Automation</strong>. Defiendo infraestructura, automatizo el desarrollo de código y aseguro la calidad del software.
-          </p>
-          <div class="hero-buttons">
-            <a href="resume.pdf" download="CV_Resume.pdf" class="btn btn-primary" id="btn-download-cv" data-en="<svg width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4'></path><polyline points='7 10 12 15 17 10'></polyline><line x1='12' y1='15' x2='12' y2='3'></line></svg> Download CV">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                <polyline points="7 10 12 15 17 10"></polyline>
-                <line x1="12" y1="15" x2="12" y2="3"></line>
-              </svg>
-              Descargar CV
-            </a>
-            <a href="https://github.com/LUCKYTANO765" target="_blank" rel="noopener" class="btn btn-secondary" id="btn-github-link" data-en="<svg width='18' height='18' viewBox='0 0 24 24' fill='currentColor'><path d='M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z'/></svg> View GitHub">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-              </svg>
-              Ver GitHub
-            </a>
-          </div>
+<!-- HERO -->
+<section class="hero" id="inicio">
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-content">
+        <div class="status reveal"><span class="dot"></span><span data-en="Available for projects · Bolivia (GMT-4)">Disponible para proyectos · Bolivia (GMT-4)</span></div>
+        <h1 class="hero-title reveal" data-en="Building high-performance, <span class='shimmer'>scalable</span> & real-time systems.">Construyo sistemas <span class="shimmer">escalables</span>, en tiempo real y de alto rendimiento.</h1>
+        <p class="hero-desc reveal" data-en="<strong>Full-Stack Software Engineer</strong>. I build robust monorepos, manage real-time data ingestion, and orchestrate optimized databases.">
+          <strong>Ingeniero de Software Full-Stack</strong>. Construyo monorepos robustos, gestiono ingesta de datos en tiempo real y orquesto bases de datos optimizadas.
+        </p>
+        <div class="hero-cta reveal">
+          <a href="resume.pdf" download="CV_Dorian_Flores.pdf" class="btn btn-primary" data-magnetic data-en="<svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4'/><polyline points='7 10 12 15 17 10'/><line x1='12' y1='15' x2='12' y2='3'/></svg> Download CV">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Descargar CV
+          </a>
+          <a href="https://github.com/LUCKYTANO765" target="_blank" rel="noopener" class="btn btn-ghost" data-magnetic data-en="<svg viewBox='0 0 24 24' fill='currentColor'><path d='M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.21 11.39.6.11.82-.26.82-.58v-2.23c-3.34.73-4.04-1.41-4.04-1.41-.55-1.39-1.33-1.76-1.33-1.76-1.09-.74.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.5 1 .11-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.25 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.49 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.21.7.82.58A12 12 0 0 0 24 12c0-6.63-5.37-12-12-12z'/></svg> View GitHub">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.21 11.39.6.11.82-.26.82-.58v-2.23c-3.34.73-4.04-1.41-4.04-1.41-.55-1.39-1.33-1.76-1.33-1.76-1.09-.74.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.5 1 .11-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.25 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.49 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.21.7.82.58A12 12 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg> Ver GitHub
+          </a>
         </div>
-
-        <div class="hero-visual reveal-up">
-          <div class="visual-sphere">
-            <div class="visual-core">
-              <svg viewBox="0 0 24 24">
-                <path d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4M12,6A6,6 0 0,0 6,12A6,6 0 0,0 12,18A6,6 0 0,0 18,12A6,6 0 0,0 12,6M12,8A4,4 0 0,1 16,12A4,4 0 0,1 12,16A4,4 0 0,1 8,12A4,4 0 0,1 12,8Z" />
-              </svg>
-            </div>
+        <div class="hero-stats reveal">
+          <div class="stat"><div class="num g-ai" data-count="6" data-suffix="+">0</div><div class="lbl" data-en="Projects">Proyectos</div></div>
+          <div class="stat"><div class="num g-cyber" data-count="4">0</div><div class="lbl" data-en="Specialties">Especialidades</div></div>
+          <div class="stat"><div class="num g-qa" data-count="80" data-suffix="%">0</div><div class="lbl" data-en="Fewer bugs via TDD">Menos bugs con TDD</div></div>
+          <div class="stat"><div class="num g-web" data-count="3" data-suffix="+">0</div><div class="lbl" data-en="Years exp.">Años exp.</div></div>
+        </div>
+      </div>
+      <div class="hero-visual reveal">
+        <div class="orbit">
+          <div class="ring r1"><span class="node"></span></div>
+          <div class="ring r2"><span class="node"></span></div>
+          <div class="ring r3"><span class="node"></span></div>
+          <div class="core">
+            <svg viewBox="0 0 24 24"><path d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4M12,6A6,6 0 0,0 6,12A6,6 0 0,0 12,18A6,6 0 0,0 18,12A6,6 0 0,0 12,6M12,8A4,4 0 0,1 16,12A4,4 0 0,1 12,16A4,4 0 0,1 8,12A4,4 0 0,1 12,8Z"/></svg>
           </div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- PILLARS SECTION -->
-  <section class="section" id="pilares">
-    <div class="container">
-      <h2 class="section-title reveal-up" data-en="Areas of Expertise">Áreas de Especialización</h2>
-      <div class="pillars-grid">
+<!-- MARQUEE -->
+<div class="marquee">
+  <div class="marquee-track">
+    <span>React</span><span>Node.js</span><span>Go</span><span>TypeScript</span><span>PostgreSQL</span><span>Prisma</span><span>sqlc</span><span>Docker</span><span>Playwright</span><span>Vitest</span><span>TailwindCSS</span>
+    <span>React</span><span>Node.js</span><span>Go</span><span>TypeScript</span><span>PostgreSQL</span><span>Prisma</span><span>sqlc</span><span>Docker</span><span>Playwright</span><span>Vitest</span><span>TailwindCSS</span>
+  </div>
+</div>
 
-        <!-- Pillar AI and Agentic -->
-        <div class="glass-card pillar-card pillar-ai reveal-up">
-          <div class="pillar-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
-              <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
-              <line x1="12" y1="22.08" x2="12" y2="12"></line>
-            </svg>
-          </div>
-          <h3 class="pillar-title gradient-ai" data-en="AI and LLM Agents">IA y Agentes LLM</h3>
-          <p class="pillar-desc" data-en="I build autonomous systems and complex workflows using advanced LLMs. Expert in lifecycle development optimization with AI agents.">
-            Desarrollo sistemas autónomos y flujos complejos usando LLMs avanzados. Experto en optimización del ciclo de desarrollo con agentes de IA.
-          </p>
-          <div class="pillar-bullets">
-            <div class="pillar-bullet">
-              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-              <span data-en="Expert usage of the <strong>Claude</strong> ecosystem">Uso experto del ecosistema de <strong>Claude</strong></span>
-            </div>
-            <div class="pillar-bullet">
-              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-              <span data-en="Agent orchestration using <strong>Antigravity</strong>">Orquestación de agentes con <strong>Antigravity</strong></span>
-            </div>
-            <div class="pillar-bullet">
-              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-              <span data-en="Prompt Engineering and Tool Calling">Ingeniería de Prompts y Tool Calling</span>
-            </div>
-          </div>
+<!-- PILLARS -->
+<section class="section" id="pilares">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow" data-en="What I do">Qué hago</span>
+      <h2 class="section-title" data-en="Areas of <span class='g-brand'>expertise</span>">Áreas de <span class="g-brand">especialización</span></h2>
+    </div>
+    <div class="pillars">
+      <div class="glass spot pillar pillar-ai reveal"><div class="bar"></div>
+        <div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg></div>
+        <h3 class="g-ai" data-en="Frontend Development">Desarrollo Frontend</h3>
+        <p data-en="Interactive, high-performance, real-time user interfaces with premium UX.">Interfaces interactivas, de alto rendimiento y tiempo real con UX premium.</p>
+        <div class="bullets">
+          <div><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg><span data-en="React, Vite & TailwindCSS">React, Vite y TailwindCSS</span></div>
+          <div><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg><span data-en="State management with <strong>Zustand</strong>">Gestión de estado con <strong>Zustand</strong></span></div>
+          <div><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg><span data-en="Real-time with SSE & WebSockets">Tiempo real con SSE y WebSockets</span></div>
         </div>
-
-        <!-- Pillar Cybersecurity -->
-        <div class="glass-card pillar-card pillar-cyber reveal-up">
-          <div class="pillar-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
-              <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
-            </svg>
-          </div>
-          <h3 class="pillar-title gradient-cyber" data-en="Cybersecurity">Ciberseguridad</h3>
-          <p class="pillar-desc" data-en="Code auditing, OSINT research, and computer forensics to safeguard web applications and digital integrity.">
-            Auditoría de código, investigación en OSINT e informática forense para proteger aplicaciones web y asegurar la integridad digital.
-          </p>
-          <div class="pillar-bullets">
-            <div class="pillar-bullet">
-              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-              <span data-en="Pentesting and OWASP Top 10 Auditing">Pruebas de Pentesting y OWASP Top 10</span>
-            </div>
-            <div class="pillar-bullet">
-              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-              <span data-en="OSINT investigations and gathering">Búsqueda e investigación con OSINT</span>
-            </div>
-            <div class="pillar-bullet">
-              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-              <span data-en="Computer Forensics and Analysis">Informática Forense y Análisis</span>
-            </div>
-          </div>
+      </div>
+      <div class="glass spot pillar pillar-cyber reveal"><div class="bar"></div>
+        <div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+        <h3 class="g-cyber" data-en="Backend Development">Desarrollo Backend</h3>
+        <p data-en="Scalable APIs, concurrent background workers, and clean modular systems.">APIs escalables, workers concurrentes en segundo plano y sistemas modulares.</p>
+        <div class="bullets">
+          <div><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg><span data-en="REST APIs in <strong>Go</strong> & <strong>Node.js</strong>">APIs REST en <strong>Go</strong> y <strong>Node.js</strong></span></div>
+          <div><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg><span data-en="Background workers & cronjobs">Cronjobs y workers concurrentes</span></div>
+          <div><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg><span data-en="Strict TypeScript architectures">Arquitectura estricta de TypeScript</span></div>
         </div>
-
-        <!-- Pillar QA -->
-        <div class="glass-card pillar-card pillar-qa reveal-up">
-          <div class="pillar-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
-            </svg>
-          </div>
-          <h3 class="pillar-title gradient-qa" data-en="QA and Automation">QA y Automatización</h3>
-          <p class="pillar-desc" data-en="Quality assurance through robust automated testing suites integrated directly into continuous integration workflows.">
-            Aseguramiento de la calidad mediante pruebas automatizadas robustas integradas directamente en pipelines de integración continua.
-          </p>
-          <div class="pillar-bullets">
-            <div class="pillar-bullet">
-              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-              <span data-en="E2E Automation with <strong>Playwright</strong>">Automatización E2E con <strong>Playwright</strong></span>
-            </div>
-            <div class="pillar-bullet">
-              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-              <span data-en="Continuous Integration (CI/CD workflows)">Integración Continua (CI/CD workflows)</span>
-            </div>
-            <div class="pillar-bullet">
-              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-              <span data-en="TDD Methodologies (Test-Driven Dev)">Metodologías TDD (Test-Driven Dev)</span>
-            </div>
-          </div>
+      </div>
+      <div class="glass spot pillar pillar-qa reveal"><div class="bar"></div>
+        <div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+        <h3 class="g-qa" data-en="Databases & ORMs">Bases de Datos y ORMs</h3>
+        <p data-en="Relational modeling, multi-layer schemas, and query optimization.">Modelado relacional, sincronización de esquemas y optimización.</p>
+        <div class="bullets">
+          <div><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg><span data-en="PostgreSQL & query indexing">PostgreSQL e indexación</span></div>
+          <div><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg><span data-en="Database access with <strong>Prisma</strong>">Acceso a DB con <strong>Prisma</strong></span></div>
+          <div><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg><span data-en="Strict sync with <strong>sqlc</strong> for Go">Sincronización estricta con <strong>sqlc</strong></span></div>
         </div>
-
-        <!-- Pillar Web Development -->
-        <div class="glass-card pillar-card pillar-web reveal-up">
-          <div class="pillar-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
-              <polyline points="2 17 12 22 22 17"></polyline>
-              <polyline points="2 12 12 17 22 12"></polyline>
-            </svg>
-          </div>
-          <h3 class="pillar-title gradient-web" data-en="Web Development">Desarrollo Web</h3>
-          <p class="pillar-desc" data-en="Creating high-performance responsive web applications using modern architectures, ensuring premium UX, styling, and fast loading.">
-            Creación de aplicaciones web responsivas de alto rendimiento usando arquitecturas modernas, garantizando una UX premium, estilos limpios y carga rápida.
-          </p>
-          <div class="pillar-bullets">
-            <div class="pillar-bullet">
-              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-              <span data-en="Modern frontend with <strong>React</strong> and <strong>Vite</strong>">Frontend moderno con <strong>React</strong> y <strong>Vite</strong></span>
-            </div>
-            <div class="pillar-bullet">
-              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-              <span data-en="Backend development in <strong>Go (Golang)</strong>">Desarrollo backend en <strong>Go (Golang)</strong></span>
-            </div>
-            <div class="pillar-bullet">
-              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-              <span data-en="Integration of custom REST APIs">Integración de APIs REST personalizadas</span>
-            </div>
-          </div>
+      </div>
+      <div class="glass spot pillar pillar-web reveal"><div class="bar"></div>
+        <div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg></div>
+        <h3 class="g-web" data-en="Architecture & DevOps">Arquitectura y DevOps</h3>
+        <p data-en="E2E test pipelines, Docker environments, and monorepo management.">Pipelines de tests E2E, entornos Docker y gestión de monorepos.</p>
+        <div class="bullets">
+          <div><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg><span data-en="Monorepos with <strong>pnpm</strong>">Monorepos estructurados con <strong>pnpm</strong></span></div>
+          <div><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg><span data-en="E2E testing with <strong>Playwright</strong>">Pruebas E2E con <strong>Playwright</strong></span></div>
+          <div><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg><span data-en="Docker & container deployment">Despliegue con Docker y Compose</span></div>
         </div>
-
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- SKILLS MATRIX SECTION -->
-  <section class="section" id="habilidades">
-    <div class="container">
-      <h2 class="section-title reveal-up" data-en="Technical Skills">Habilidades Técnicas</h2>
-      <div class="skills-grid">
-
-        <!-- Skill Group AI, Web Dev and QA -->
-        <div class="glass-card skills-category reveal-up">
-          <h3 class="category-title" data-en="<span class='logo-symbol'>&lt;</span> AI, Web Dev and QA <span class='logo-symbol'>/&gt;</span>">
-            <span class="logo-symbol">&lt;</span> IA, Desarrollo Web y QA <span class="logo-symbol">/&gt;</span>
-          </h3>
-          <div class="skill-list">
-            <div class="skill-item">
-              <div class="skill-info">
-                <span class="skill-name" data-en="Web Development (React and Go)">Desarrollo Web (React y Go)</span>
-                <span class="skill-value">90%</span>
-              </div>
-              <div class="skill-bar-wrapper">
-                <div class="skill-bar-fill ai-fill" data-percent="90%"></div>
-              </div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-info">
-                <span class="skill-name">Agentic Workflows (Antigravity)</span>
-                <span class="skill-value">95%</span>
-              </div>
-              <div class="skill-bar-wrapper">
-                <div class="skill-bar-fill ai-fill" data-percent="95%"></div>
-              </div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-info">
-                <span class="skill-name" data-en="Claude and Prompt Engineering">Claude y Prompt Engineering</span>
-                <span class="skill-value">92%</span>
-              </div>
-              <div class="skill-bar-wrapper">
-                <div class="skill-bar-fill ai-fill" data-percent="92%"></div>
-              </div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-info">
-                <span class="skill-name" data-en="Playwright and QA Testing">Playwright y QA Testing</span>
-                <span class="skill-value">90%</span>
-              </div>
-              <div class="skill-bar-wrapper">
-                <div class="skill-bar-fill ai-fill" data-percent="90%"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Skill Group Cyber and Forensics -->
-        <div class="glass-card skills-category reveal-up">
-          <h3 class="category-title" data-en="<span class='logo-symbol'>&lt;</span> Cybersecurity and Forensics <span class='logo-symbol'>/&gt;</span>">
-            <span class="logo-symbol">&lt;</span> Ciberseguridad y Forense <span class="logo-symbol">/&gt;</span>
-          </h3>
-          <div class="skill-list">
-            <div class="skill-item">
-              <div class="skill-info">
-                <span class="skill-name" data-en="Pentesting and Security Audits">Pentesting y Auditorías de Seguridad</span>
-                <span class="skill-value">85%</span>
-              </div>
-              <div class="skill-bar-wrapper">
-                <div class="skill-bar-fill tech-fill" data-percent="85%"></div>
-              </div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-info">
-                <span class="skill-name" data-en="OSINT (Open Source Intelligence)">OSINT (Fuentes Abiertas)</span>
-                <span class="skill-value">82%</span>
-              </div>
-              <div class="skill-bar-wrapper">
-                <div class="skill-bar-fill tech-fill" data-percent="82%"></div>
-              </div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-info">
-                <span class="skill-name" data-en="Computer Forensics and Analysis">Informática Forense y Análisis</span>
-                <span class="skill-value">80%</span>
-              </div>
-              <div class="skill-bar-wrapper">
-                <div class="skill-bar-fill tech-fill" data-percent="80%"></div>
-              </div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-info">
-                <span class="skill-name" data-en="Python and Linux Scripting">Python y Scripting en Linux</span>
-                <span class="skill-value">80%</span>
-              </div>
-              <div class="skill-bar-wrapper">
-                <div class="skill-bar-fill tech-fill" data-percent="80%"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Tools Badges Grid -->
-        <div class="tools-grid reveal-up">
-          <h3 class="tools-title" data-en="Tools and Frameworks">Herramientas y Frameworks</h3>
-          <div class="tools-container">
-            <div class="tool-badge special">Antigravity SDK</div>
-            <div class="tool-badge special">Claude Code</div>
-            <div class="tool-badge special">n8n</div>
-            <div class="tool-badge special">Codex</div>
-            <div class="tool-badge">OpenCode</div>
-            <div class="tool-badge">Go (Golang)</div>
-            <div class="tool-badge">React</div>
-            <div class="tool-badge">Playwright</div>
-            <div class="tool-badge">OWASP ZAP</div>
-            <div class="tool-badge">Burp Suite</div>
-            <div class="tool-badge">Nmap</div>
-            <div class="tool-badge">Docker</div>
-            <div class="tool-badge">GitHub Actions</div>
-            <div class="tool-badge">Jest</div>
-            <div class="tool-badge">Node.js</div>
-            <div class="tool-badge">Git</div>
-            <div class="tool-badge">Bash/Linux</div>
-          </div>
-        </div>
-
-        <!-- Languages Badges Grid -->
-        <div class="tools-grid reveal-up" style="margin-top: 40px;">
-          <h3 class="tools-title" data-en="Languages">Idiomas</h3>
-          <div class="tools-container">
-            <div class="tool-badge special" data-en="Spanish (Native)">Español (Nativo)</div>
-            <div class="tool-badge special" data-en="English (B2)">Inglés (B2)</div>
-            <div class="tool-badge special" data-en="Portuguese (A1)">Portugués (A1)</div>
-          </div>
-        </div>
-
+<!-- SKILLS -->
+<section class="section" id="habilidades">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow" data-en="Proficiency">Dominio</span>
+      <h2 class="section-title" data-en="Technical <span class='g-brand'>skills</span>">Habilidades <span class="g-brand">técnicas</span></h2>
+    </div>
+    <div class="skills">
+      <div class="glass spot skill-card reveal">
+        <h3><span class="sym">&lt;</span> <span data-en="Frontend & Backend">Frontend y Backend</span> <span class="sym">/&gt;</span></h3>
+        <div class="skill"><div class="skill-top"><span data-en="React & TypeScript">React y TypeScript</span><span class="val">92%</span></div><div class="skill-track"><div class="skill-fill fill-ai" data-p="92"></div></div></div>
+        <div class="skill"><div class="skill-top"><span data-en="Node.js (Express)">Node.js (Express)</span><span class="val">90%</span></div><div class="skill-track"><div class="skill-fill fill-ai" data-p="90"></div></div></div>
+        <div class="skill"><div class="skill-top"><span data-en="Go Programming">Programación en Go</span><span class="val">88%</span></div><div class="skill-track"><div class="skill-fill fill-ai" data-p="88"></div></div></div>
+        <div class="skill"><div class="skill-top"><span data-en="PostgreSQL & Prisma">PostgreSQL y Prisma</span><span class="val">88%</span></div><div class="skill-track"><div class="skill-fill fill-ai" data-p="88"></div></div></div>
+      </div>
+      <div class="glass spot skill-card reveal">
+        <h3><span class="sym">&lt;</span> <span data-en="Architecture & DevOps">Arquitectura y DevOps</span> <span class="sym">/&gt;</span></h3>
+        <div class="skill"><div class="skill-top"><span data-en="pnpm Monorepos & Docker">Monorepos (pnpm) y Docker</span><span class="val">90%</span></div><div class="skill-track"><div class="skill-fill fill-cyber" data-p="90"></div></div></div>
+        <div class="skill"><div class="skill-top"><span data-en="E2E & Unit Testing (Playwright/Vitest)">Tests E2E y Unitarios (Playwright/Vitest)</span><span class="val">88%</span></div><div class="skill-track"><div class="skill-fill fill-cyber" data-p="88"></div></div></div>
+        <div class="skill"><div class="skill-top"><span data-en="Real-time SSE & WebSockets">Tiempo Real SSE y WebSockets</span><span class="val">85%</span></div><div class="skill-track"><div class="skill-fill fill-cyber" data-p="85"></div></div></div>
+        <div class="skill"><div class="skill-top"><span data-en="CI/CD (GitHub Actions)">CI/CD (GitHub Actions)</span><span class="val">80%</span></div><div class="skill-track"><div class="skill-fill fill-cyber" data-p="80"></div></div></div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- PROJECTS SECTION -->
-  <section class="section" id="proyectos">
-    <div class="container">
-      <h2 class="section-title reveal-up" data-en="Featured Projects">Proyectos Destacados</h2>
-
-      <div class="projects-filters reveal-up">
-        <button class="filter-btn active" data-filter="all" data-en="All">Todos</button>
-        <button class="filter-btn" data-filter="cyber" data-en="Cybersecurity">Ciberseguridad</button>
-        <button class="filter-btn" data-filter="ai" data-en="AI and Agents">IA y Agentes</button>
-        <button class="filter-btn" data-filter="qa" data-en="QA Automation">QA Automation</button>
-      </div>
-
-      <div class="projects-grid">
-
-        <!-- Project 1 (MortalSoft Casino Suite) -->
-        <div class="glass-card project-card reveal-up" data-category="cyber" id="proj-1">
-          <div class="project-meta">
-            <span class="project-tag tag-cyber" data-en="Dev and QA">Desarrollo y QA</span>
-            <div class="project-links">
-              <a href="https://github.com/LUCKYTANO765" target="_blank" rel="noopener" class="project-link-icon" title="Ver código en GitHub">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                </svg>
-              </a>
-            </div>
-          </div>
-          <h3 class="project-title">MortalSoft Casino Suite</h3>
-          <p class="project-desc" data-en="Suite of interactive casino minigames, including Slots and Aviator-style Crash simulators. Developed using probability math and real-time reactive UI.">
-            Suite de minijuegos de casino interactivos, incluyendo simuladores de Tragamonedas (Slots) y juegos tipo Aviador (Crash). Desarrollado con lógica probabilística e interfaces responsivas en tiempo real.
-          </p>
-          <div class="project-techs">
-            <span class="project-tech">JavaScript</span>
-            <span class="project-tech">HTML5 Canvas</span>
-            <span class="project-tech">CSS3</span>
-            <span class="project-tech">Git</span>
-          </div>
-        </div>
-
-        <!-- Project 2 (Tower Auditoria) -->
-        <div class="glass-card project-card reveal-up" data-category="qa" id="proj-2">
-          <div class="project-meta">
-            <span class="project-tag tag-qa" data-en="QA and Physics">QA y Físicas</span>
-            <div class="project-links">
-              <a href="https://github.com/LUCKYTANO765" target="_blank" rel="noopener" class="project-link-icon" title="Ver código en GitHub">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                </svg>
-              </a>
-            </div>
-          </div>
-          <h3 class="project-title">Tower Auditoria</h3>
-          <p class="project-desc" data-en="Interactive physics apiling game developed with React and Matter.js. Integrates a custom audit panel to test collisions, physical distortions, and engine logical bugs.">
-            Juego de física interactivo desarrollado con React y Matter.js. Integra un panel de modo auditoría para validar colisiones, testear distorsiones físicas e inspeccionar fallos lógicos del motor.
-          </p>
-          <div class="project-techs">
-            <span class="project-tech">React</span>
-            <span class="project-tech">Matter.js</span>
-            <span class="project-tech">Vite</span>
-            <span class="project-tech">QA Logic</span>
-          </div>
-        </div>
-
-        <!-- Project 3 (SuperCasino365) -->
-        <div class="glass-card project-card reveal-up" data-category="qa" id="proj-3">
-          <div class="project-meta">
-            <span class="project-tag tag-qa" data-en="Dev and QA">Desarrollo y QA</span>
-            <div class="project-links">
-              <a href="https://github.com/LUCKYTANO765/supercasino365" target="_blank" rel="noopener" class="project-link-icon" title="Ver código en GitHub">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                </svg>
-              </a>
-            </div>
-          </div>
-          <h3 class="project-title">SuperCasino365</h3>
-          <p class="project-desc" data-en="Virtual casino platform featuring interactive games like Blackjack in React and TypeScript, Go backend, and E2E QA automated testing using Playwright.">
-            Plataforma de casino virtual con juegos interactivos como Blackjack desarrollados en React y TypeScript. Cuenta con backend en Go y suite completa de pruebas de calidad automatizadas (QA E2E) con Playwright.
-          </p>
-          <div class="project-techs">
-            <span class="project-tech">React</span>
-            <span class="project-tech">Go (Golang)</span>
-            <span class="project-tech">TypeScript</span>
-            <span class="project-tech">Playwright</span>
-          </div>
-        </div>
-
-        <!-- Project 4 (GameDev Tower Rush 3D) -->
-        <div class="glass-card project-card reveal-up" data-category="cyber" id="proj-4">
-          <div class="project-meta">
-            <span class="project-tag tag-cyber" data-en="3D Development">Desarrollo 3D</span>
-            <div class="project-links">
-              <a href="https://github.com/LUCKYTANO765" target="_blank" rel="noopener" class="project-link-icon" title="Ver código en GitHub">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                </svg>
-              </a>
-            </div>
-          </div>
-          <h3 class="project-title">GameDev Tower Rush 3D</h3>
-          <p class="project-desc" data-en="Three-dimensional Tower Defense / Tower Rush game. Implements pathfinding algorithms, active combat mechanics, and optimized rendering systems.">
-            Juego tridimensional del género Tower Rush. Implementa mecánicas dinámicas de defensa, pathfinding complejo de enemigos y renderizado optimizado de gráficos 3D en tiempo real.
-          </p>
-          <div class="project-techs">
-            <span class="project-tech">C#</span>
-            <span class="project-tech">Unity 3D</span>
-            <span class="project-tech">3D Physics</span>
-            <span class="project-tech">Git</span>
-          </div>
-        </div>
-
-        <!-- Project 5 (QA) -->
-        <div class="glass-card project-card reveal-up" data-category="qa" id="proj-5">
-          <div class="project-meta">
-            <span class="project-tag tag-qa" data-en="QA Automation">QA Automation</span>
-            <div class="project-links">
-              <a href="https://github.com/LUCKYTANO765" target="_blank" rel="noopener" class="project-link-icon" title="Ver código en GitHub">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                </svg>
-              </a>
-            </div>
-          </div>
-          <h3 class="project-title">Casino E2E Test Suite</h3>
-          <p class="project-desc" data-en="Automated E2E QA test suite to validate probability RNG engine bounds, online transaction flows, and network interruption resiliences in crash/slot systems.">
-            Marco de pruebas automatizadas E2E para validar la lógica de probabilidad del motor de tragamonedas y juegos tipo crash, integrando flujos de transacciones y cortes de red simulados.
-          </p>
-          <div class="project-techs">
-            <span class="project-tech">Playwright</span>
-            <span class="project-tech">Jest</span>
-            <span class="project-tech">TypeScript</span>
-            <span class="project-tech">GitHub Actions</span>
-          </div>
-        </div>
-
-        <!-- Project 6 (Century 21 n8n Automation) -->
-        <div class="glass-card project-card reveal-up" data-category="ai" id="proj-6">
-          <div class="project-meta">
-            <span class="project-tag tag-ai" data-en="Automation">Automatización</span>
-            <div class="project-links">
-              <a href="https://github.com/LUCKYTANO765" target="_blank" rel="noopener" class="project-link-icon" title="Ver código en GitHub">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                </svg>
-              </a>
-            </div>
-          </div>
-          <h3 class="project-title">Century 21 Job Automator</h3>
-          <p class="project-desc" data-en="Automated n8n recruitment workflows for Century 21. Searches job listings, filters applicant pools, and simplifies communications 100% autonomously.">
-            Flujos de trabajo automatizados en n8n para Century 21 que buscan empleos, filtran perfiles de postulantes y agilizan la contratación de forma 100% autónoma.
-          </p>
-          <div class="project-techs">
-            <span class="project-tech">n8n</span>
-            <span class="project-tech">Workflows</span>
-            <span class="project-tech">APIs REST</span>
-            <span class="project-tech">JSON</span>
-          </div>
-        </div>
-
-        <!-- Project 7 (Local LLM Orchestrator) -->
-        <div class="glass-card project-card reveal-up" data-category="ai" id="proj-7">
-          <div class="project-meta">
-            <span class="project-tag tag-ai" data-en="Local Models">Modelos Locales</span>
-            <div class="project-links">
-              <a href="https://github.com/LUCKYTANO765" target="_blank" rel="noopener" class="project-link-icon" title="Ver código en GitHub">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                </svg>
-              </a>
-            </div>
-          </div>
-          <h3 class="project-title">Local LLM Orchestrator</h3>
-          <p class="project-desc" data-en="Private configuration and hosting of local AI models (Llama, Qwen) with agentic orchestration layers and customized offline coding pipelines.">
-            Configuración y despliegue local de modelos de lenguaje (Llama, Qwen) optimizados para correr de forma privada usando pipelines y agentes inteligentes autónomos.
-          </p>
-          <div class="project-techs">
-            <span class="project-tech">Local LLMs</span>
-            <span class="project-tech">AI Agents</span>
-            <span class="project-tech">LM Studio</span>
-            <span class="project-tech">Python</span>
-          </div>
-        </div>
-
-        <!-- Project 8 (Parental Control) -->
-        <div class="glass-card project-card reveal-up" data-category="cyber" id="proj-8">
-          <div class="project-meta">
-            <span class="project-tag tag-cyber" data-en="Security">Seguridad</span>
-            <div class="project-links">
-              <a href="https://github.com/LUCKYTANO765" target="_blank" rel="noopener" class="project-link-icon" title="Ver código en GitHub">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                </svg>
-              </a>
-            </div>
-          </div>
-          <h3 class="project-title">Control Parental Game Suite</h3>
-          <p class="project-desc" data-en="Parental control application coupled with custom learning games to dynamically restrict and guide screen time usage and network access.">
-            Aplicación de control parental integrada con dinámicas de juegos interactivos para restringir y guiar de manera lúdica el tiempo en pantalla y accesos.
-          </p>
-          <div class="project-techs">
-            <span class="project-tech">Node.js</span>
-            <span class="project-tech">Security API</span>
-            <span class="project-tech">CSS3 Grid</span>
-            <span class="project-tech">JS</span>
-          </div>
-        </div>
-
-        <!-- Project 9 (Medical Landing Page and Sports) -->
-        <div class="glass-card project-card reveal-up" data-category="qa" id="proj-9">
-          <div class="project-meta">
-            <span class="project-tag tag-qa" data-en="Web Premium">Web Premium</span>
-            <div class="project-links">
-              <a href="https://github.com/LUCKYTANO765" target="_blank" rel="noopener" class="project-link-icon" title="Ver código en GitHub">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                </svg>
-              </a>
-            </div>
-          </div>
-          <h3 class="project-title">MediCare y Deportes Portal</h3>
-          <p class="project-desc" data-en="Bespoke high-converting medical landing pages and interactive sports tracking portals with live score updating tables.">
-            Desarrollo de landing pages médicas de alta conversión y plataformas web de deportes interactivos con estadísticas y marcadores actualizados.
-          </p>
-          <div class="project-techs">
-            <span class="project-tech">React</span>
-            <span class="project-tech">TypeScript</span>
-            <span class="project-tech">TailwindCSS</span>
-            <span class="project-tech">SEO</span>
-          </div>
-        </div>
-
-      </div>
+<!-- PROJECTS -->
+<section class="section" id="proyectos">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow" data-en="Selected work">Trabajo seleccionado</span>
+      <h2 class="section-title" data-en="Featured <span class='g-brand'>projects</span>">Proyectos <span class="g-brand">destacados</span></h2>
     </div>
-  </section>
-
-  <!-- TIMELINE SECTION -->
-  <section class="section" id="trayectoria">
-    <div class="container">
-      <h2 class="section-title reveal-up" data-en="Timeline and Achievements">Trayectoria y Logros</h2>
-      <div class="timeline">
-
-        <!-- Timeline Item 1 -->
-        <div class="timeline-item reveal-up" id="time-1">
-          <div class="timeline-dot"></div>
-          <div class="glass-card timeline-content">
-            <div class="timeline-date" data-en="2025 - Present">2025 - Presente</div>
-            <h3 class="timeline-role" data-en="AI Automation Architect and QA Lead">AI Automation Architect y QA Lead</h3>
-            <div class="timeline-company">Global Tech Solutions</div>
-            <p class="timeline-desc" data-en="QA Automation manager for payment cores and designer of automated repository agent cycles. Reduced manual QA testing times by 70% using intelligent agents.">
-              Responsable de automatización de QA para core de pagos y el diseño del pipeline de desarrollo con agentes automatizados. Reducción de tiempos de testing manual en un 70% usando orquestación inteligente de agentes.
-            </p>
-          </div>
-        </div>
-
-        <!-- Timeline Item 2 -->
-        <div class="timeline-item reveal-up" id="time-2">
-          <div class="timeline-dot"></div>
-          <div class="glass-card timeline-content">
-            <div class="timeline-date" data-en="2023 - 2025">2023 - 2025</div>
-            <h3 class="timeline-role" data-en="Application Security Specialist">Especialista en Seguridad de Aplicaciones</h3>
-            <div class="timeline-company">CyberShield Security</div>
-            <p class="timeline-desc" data-en="Pentesting and security auditing of web APIs and client sites. Formulated secure code practices and integrated SAST tools in pipelines.">
-              Auditoría y pentesting de APIs y sitios web del Top 100 empresarial. Definición de políticas de codificación segura e integración de herramientas SAST en flujos CI/CD.
-            </p>
-          </div>
-        </div>
-
-        <!-- Timeline Item 3 -->
-        <div class="timeline-item reveal-up" id="time-3">
-          <div class="timeline-dot"></div>
-          <div class="glass-card timeline-content">
-            <div class="timeline-date" data-en="2021 - 2023">2021 - 2023</div>
-            <h3 class="timeline-role" data-en="QA Automation Engineer">Ingeniero de QA Automation</h3>
-            <div class="timeline-company">Fintech Innovators</div>
-            <p class="timeline-desc" data-en="UI test framework deployments using Playwright and Jest. Assured zero critical production crashes through test-driven development.">
-              Implementación de frameworks de testing de interfaz de usuario con Playwright y Jest. Aseguramiento de cero caídas críticas en producción mediante Test-Driven Development.
-            </p>
-          </div>
-        </div>
-
-      </div>
+    <div class="filters reveal">
+      <button class="filter active" data-filter="all" data-en="All">Todos</button>
+      <button class="filter" data-filter="frontend" data-en="Frontend">Frontend</button>
+      <button class="filter" data-filter="backend" data-en="Backend">Backend</button>
+      <button class="filter" data-filter="fullstack" data-en="Full-Stack">Full-Stack</button>
+      <button class="filter" data-filter="devops" data-en="DevOps & QA">DevOps y QA</button>
     </div>
-  </section>
+    <div class="projects" id="projectGrid"></div>
+  </div>
+</section>
 
-  <!-- CONTACT SECTION -->
-  <section class="section" id="contacto">
-    <div class="container">
-      <h2 class="section-title reveal-up" data-en="Let's Start a Project">Iniciemos un Proyecto</h2>
-      <div class="contact-grid">
-
-        <!-- Info Column -->
-        <div class="contact-info reveal-up">
-          <div>
-            <h3 class="contact-info-title gradient-text" data-en="Let's talk tech">¿Hablamos de tecnología?</h3>
-            <p class="contact-info-desc" data-en="If you want to audit system security, implement intelligent automation flows using AI agents, or automate software testing, reach out.">
-              Si buscas auditar la seguridad de tu sistema, implementar workflows inteligentes basados en agentes de inteligencia artificial o automatizar la calidad de tu software, hablemos.
-            </p>
-          </div>
-
-          <div class="contact-details">
-            <div class="contact-detail-item">
-              <div class="contact-detail-icon">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                  <polyline points="22,6 12,13 2,6"></polyline>
-                </svg>
-              </div>
-              <div class="contact-detail-text">
-                <span class="contact-detail-label">Email</span>
-                <span class="contact-detail-value"><a href="mailto:dorianjfb01@gmail.com" style="color: inherit; text-decoration: none; border-bottom: 1px dashed var(--accent-cyber);">dorianjfb01@gmail.com</a></span>
-              </div>
-            </div>
-
-            <div class="contact-detail-item">
-              <div class="contact-detail-icon">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                </svg>
-              </div>
-              <div class="contact-detail-text">
-                <span class="contact-detail-label">GitHub</span>
-                <span class="contact-detail-value"><a href="https://github.com/LUCKYTANO765" target="_blank" rel="noopener" style="color: inherit; text-decoration: none; border-bottom: 1px dashed var(--accent-ai);">github.com/LUCKYTANO765</a></span>
-              </div>
-            </div>
-
-            <div class="contact-detail-item">
-              <div class="contact-detail-icon">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-                </svg>
-              </div>
-              <div class="contact-detail-text">
-                <span class="contact-detail-label" data-en="Phone">Teléfono</span>
-                <span class="contact-detail-value"><a href="tel:+59178310899" style="color: inherit; text-decoration: none; border-bottom: 1px dashed var(--accent-qa);">+591 78310899</a></span>
-              </div>
-            </div>
-
-            <div class="contact-detail-item">
-              <div class="contact-detail-icon">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-                  <rect x="2" y="9" width="4" height="12"></rect>
-                  <circle cx="4" cy="4" r="2"></circle>
-                </svg>
-              </div>
-              <div class="contact-detail-text">
-                <span class="contact-detail-label">LinkedIn</span>
-                <span class="contact-detail-value">
-                  <a href="https://www.linkedin.com/in/dorian-joaquin-flores-burgoa-2b2559273/" target="_blank" rel="noopener" style="color: inherit; text-decoration: none; border-bottom: 1px dashed var(--accent-ai);">DORIAN JOAQUIN FLORES BURGOA</a>
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Form Column -->
-        <div class="glass-card reveal-up">
-          <form class="contact-form" id="contact-form">
-            <div class="form-group">
-              <label for="form-name" class="form-label" data-en="Name">Nombre</label>
-              <input type="text" id="form-name" class="form-control" placeholder="Tu nombre" data-es-placeholder="Tu nombre" data-en-placeholder="Your name" required>
-            </div>
-            <div class="form-group">
-              <label for="form-email" class="form-label" data-en="Email">Email</label>
-              <input type="email" id="form-email" class="form-control" placeholder="tu@email.com" data-es-placeholder="tu@email.com" data-en-placeholder="you@email.com" required>
-            </div>
-            <div class="form-group">
-              <label for="form-msg" class="form-label" data-en="Message">Mensaje</label>
-              <textarea id="form-msg" rows="5" class="form-control" placeholder="¿Cómo puedo ayudarte?" data-es-placeholder="¿Cómo puedo ayudarte?" data-en-placeholder="How can I help you?" required></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary form-btn" id="btn-submit-form" data-en="Send Message">Enviar Mensaje</button>
-            <div class="form-status" id="form-status-msg"></div>
-          </form>
-        </div>
-
-      </div>
+<!-- TIMELINE -->
+<section class="section" id="trayectoria">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow" data-en="Career">Carrera</span>
+      <h2 class="section-title" data-en="Timeline & <span class='g-brand'>achievements</span>">Trayectoria y <span class="g-brand">logros</span></h2>
     </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-links">
-        <a href="#inicio" class="footer-link" data-en="Home">Inicio</a>
-        <a href="#pilares" class="footer-link" data-en="Expertise">Especialidades</a>
-        <a href="#habilidades" class="footer-link" data-en="Skills">Habilidades</a>
-        <a href="#proyectos" class="footer-link" data-en="Projects">Proyectos</a>
-        <a href="#trayectoria" class="footer-link" data-en="Timeline">Trayectoria</a>
-        <a href="https://github.com/LUCKYTANO765" target="_blank" rel="noopener" class="footer-link">GitHub</a>
-      </div>
-      <p data-en="Designed and Developed with Antigravity and Claude. © 2026. All rights reserved.">Diseñado y Desarrollado con Antigravity y Claude. © 2026. Todos los derechos reservados.</p>
+    <div class="timeline">
+      <div class="tl-item reveal"><div class="dot"></div><div class="glass spot tl-card"><div class="tl-date" data-en="2025 — Present">2025 — Presente</div><h3 data-en="Full-Stack Software Engineer">Ingeniero de Software Full-Stack</h3><div class="tl-co">Global Tech Solutions</div><p data-en="Lead developer for betting cores and transaction systems. Reduced bugs by 80% using TDD and monorepo architectures.">Desarrollador líder de cores de apuestas y sistemas de transacciones. Reduje errores un 80% mediante TDD y arquitecturas de monorepo.</p></div></div>
+      <div class="tl-item reveal"><div class="dot"></div><div class="glass spot tl-card"><div class="tl-date">2023 — 2025</div><h3 data-en="Backend Developer (Go / Node.js)">Desarrollador Backend (Go / Node.js)</h3><div class="tl-co">CyberShield Security</div><p data-en="Built high-performance API modules, cron data ingestion, and integrated automated database synchronizations.">Desarrollé módulos API de alta eficiencia, ingesta de datos con cronjobs y sincronización automatizada de bases de datos.</p></div></div>
+      <div class="tl-item reveal"><div class="dot"></div><div class="glass spot tl-card"><div class="tl-date">2021 — 2023</div><h3 data-en="Frontend React Developer">Desarrollador Frontend React</h3><div class="tl-co">Fintech Innovators</div><p data-en="Crafted responsive and interactive user interfaces using React, state management, and Playwright for E2E validation.">Diseñé interfaces responsivas e interactivas con React, gestión de estado y validación E2E con Playwright.</p></div></div>
     </div>
-  </footer>
+  </div>
+</section>
 
-  <script src="script.js"></script>
+<!-- CONTACT -->
+<section class="section" id="contacto">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow" data-en="Get in touch">Contacto</span>
+      <h2 class="section-title" data-en="Let's start a <span class='g-brand'>project</span>">Iniciemos un <span class="g-brand">proyecto</span></h2>
+    </div>
+    <div class="contact">
+      <div class="contact-info reveal">
+        <div>
+          <h3 class="g-brand" data-en="Let's talk tech">¿Hablamos de tecnología?</h3>
+          <p data-en="Whether you want to build interactive real-time platforms, scalable backends, or optimize relational databases — reach out.">Si buscas construir plataformas interactivas en tiempo real, backends escalables u optimizar bases de datos relacionales, hablemos.</p>
+        </div>
+        <div class="details">
+          <a class="detail" href="mailto:dorianjfb01@gmail.com"><span class="di"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span><span><span class="dlabel">Email</span><span class="dval">dorianjfb01@gmail.com</span></span></a>
+          <a class="detail" href="https://github.com/LUCKYTANO765" target="_blank" rel="noopener"><span class="di"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.21 11.39.6.11.82-.26.82-.58v-2.23c-3.34.73-4.04-1.41-4.04-1.41-.55-1.39-1.33-1.76-1.33-1.76-1.09-.74.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.5 1 .11-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.25 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.49 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.21.7.82.58A12 12 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg></span><span><span class="dlabel">GitHub</span><span class="dval">github.com/LUCKYTANO765</span></span></a>
+          <a class="detail" href="tel:+59178310899"><span class="di"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span><span><span class="dlabel" data-en="Phone">Teléfono</span><span class="dval">+591 78310899</span></span></a>
+          <a class="detail" href="https://www.linkedin.com/in/dorian-joaquin-flores-burgoa-2b2559273/" target="_blank" rel="noopener"><span class="di"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></span><span><span class="dlabel">LinkedIn</span><span class="dval">Dorian J. Flores Burgoa</span></span></a>
+        </div>
+      </div>
+      <form class="glass form reveal" id="contactForm">
+        <div class="field"><label data-en="Name">Nombre</label><input type="text" required data-en-ph="Your name" placeholder="Tu nombre"></div>
+        <div class="field"><label>Email</label><input type="email" required data-en-ph="you@email.com" placeholder="tu@email.com"></div>
+        <div class="field"><label data-en="Message">Mensaje</label><textarea rows="5" required data-en-ph="How can I help you?" placeholder="¿Cómo puedo ayudarte?"></textarea></div>
+        <button type="submit" class="btn btn-primary" data-magnetic data-en="Send message">Enviar mensaje</button>
+        <div class="form-status" id="formStatus" data-en="✓ Message sent! I'll reply soon.">✓ ¡Mensaje enviado! Te responderé pronto.</div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-links">
+      <a href="#inicio" data-en="Home">Inicio</a>
+      <a href="#pilares" data-en="Expertise">Especialidades</a>
+      <a href="#proyectos" data-en="Projects">Proyectos</a>
+      <a href="https://github.com/LUCKYTANO765" target="_blank" rel="noopener">GitHub</a>
+    </div>
+    <p data-en="© 2026 Dorian Flores Burgoa. All rights reserved.">© 2026 Dorian Flores Burgoa. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
