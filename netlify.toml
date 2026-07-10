@@ -1,0 +1,24 @@
+# Netlify config — portafolio Dorian Flores
+# Deploy: arrastra esta carpeta a netlify.com o conecta el repo de GitHub.
+
+[build]
+  publish = "."
+
+# Cache largo para assets estáticos (mejor rendimiento)
+[[headers]]
+  for = "/style.css"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "/script.js"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+# Cabeceras de seguridad básicas
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"

@@ -9,15 +9,23 @@
 </head>
 <body>
 
-  <!-- Ambient Light Orbs -->
-  <div class="glow-orb" id="orb-1"></div>
-  <div class="glow-orb" id="orb-2"></div>
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress" id="scroll-progress"></div>
+
+  <!-- Custom Cursor -->
+  <div class="cursor-dot" id="cursor-dot"></div>
+  <div class="cursor-ring" id="cursor-ring"></div>
+
+  <!-- Ambient Layers -->
+  <div class="aurora"></div>
+  <div class="noise"></div>
 
   <!-- NAVIGATION HEADER -->
   <header class="header">
     <div class="container nav-container">
       <a href="#inicio" class="logo" id="nav-logo">
-        <span class="logo-symbol">&lt;</span>PORTAFOLIO<span class="logo-symbol">/&gt;</span>
+        <span class="logo-mark">DF</span>
+        <span class="logo-text">Dorian Flores</span>
       </a>
 
       <div class="menu-toggle" id="mobile-menu-btn">
@@ -35,8 +43,31 @@
         <li><a href="#proyectos" class="nav-link" data-en="Projects">Proyectos</a></li>
         <li><a href="#trayectoria" class="nav-link" data-en="Timeline">Trayectoria</a></li>
         <li><a href="#contacto" class="nav-link" data-en="Contact">Contacto</a></li>
-        <li><button id="lang-switch-btn" class="btn-lang" title="Cambiar idioma / Change language">EN</button></li>
-        <li><button id="theme-switch-btn" class="btn-theme" title="Cambiar tema / Toggle theme">☼</button></li>
+        <li>
+          <button id="lang-switch-btn" class="btn-lang" title="Cambiar idioma / Change language" aria-label="Cambiar idioma / Change language">
+            <span class="lang-opt active" data-lang="es">ES</span>
+            <span class="lang-opt" data-lang="en">EN</span>
+            <span class="lang-slider"></span>
+          </button>
+        </li>
+        <li>
+          <button id="theme-switch-btn" class="btn-theme" title="Cambiar tema / Toggle theme" aria-label="Cambiar tema / Toggle theme">
+            <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+            <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </button>
+        </li>
       </ul>
     </div>
   </header>
@@ -47,10 +78,17 @@
     <div class="container">
       <div class="hero-grid">
         <div class="hero-content reveal-up active">
-          <div class="hero-tagline" data-en="Engineering the Future">Ingeniería del Futuro</div>
-          <h1 class="hero-title gradient-text" data-en="Dorian Joaquín <br><span class='gradient-ai'>Flores Burgoa</span>">Dorian Joaquín <br><span class="gradient-ai">Flores Burgoa</span></h1>
-          <p class="hero-description" data-en="<strong>Full-Stack Software Engineer</strong> passionate about programming, cybersecurity, QA, and sports. I build robust monorepos, manage real-time data ingestion, and orchestrate optimized databases.">
-            <strong>Ingeniero de Software Full-Stack</strong> apasionado por la programación, la ciberseguridad, el control de calidad (QA) y los deportes. Construyo monorepos robustos, gestiono ingesta de datos en tiempo real y orquesto bases de datos optimizadas.
+          <div class="hero-badge">
+            <span class="badge-dot"></span>
+            <span data-en="Available for new projects">Disponible para nuevos proyectos</span>
+          </div>
+          <h1 class="hero-title" data-en="Dorian Joaquín <br><span class='gradient-ai'>Flores Burgoa</span>">Dorian Joaquín <br><span class="gradient-ai">Flores Burgoa</span></h1>
+          <div class="hero-role">
+            <span class="role-prefix" data-en="Specialist in">Especialista en</span>
+            <span class="role-dynamic"><span id="typewriter-text">Ciberseguridad y Pentesting</span><span class="type-cursor"></span></span>
+          </div>
+          <p class="hero-description" data-en="<strong>Full-Stack Computer Engineer</strong> passionate about programming, cybersecurity, QA, and sports. I build robust monorepos, manage real-time data ingestion, and orchestrate optimized databases.">
+            <strong>Ingeniero Informático Full-Stack</strong> apasionado por la programación, la ciberseguridad, el control de calidad (QA) y los deportes. Construyo monorepos robustos, gestiono ingesta de datos en tiempo real y orquesto bases de datos optimizadas.
           </p>
           <div class="hero-buttons">
             <a href="resume.pdf" download="CV_Resume.pdf" class="btn btn-primary" id="btn-download-cv" data-en="<svg width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4'></path><polyline points='7 10 12 15 17 10'></polyline><line x1='12' y1='15' x2='12' y2='3'></line></svg> Download CV">
@@ -68,17 +106,52 @@
               Ver GitHub
             </a>
           </div>
-        </div>
 
-        <div class="hero-visual reveal-up">
-          <div class="visual-sphere">
-            <div class="visual-core">
-              <svg viewBox="0 0 24 24">
-                <path d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4M12,6A6,6 0 0,0 6,12A6,6 0 0,0 12,18A6,6 0 0,0 18,12A6,6 0 0,0 12,6M12,8A4,4 0 0,1 16,12A4,4 0 0,1 12,16A4,4 0 0,1 8,12A4,4 0 0,1 12,8Z" />
-              </svg>
+          <div class="hero-stats">
+            <div class="stat-item">
+              <span class="stat-value"><span class="stat-num" data-target="15">0</span>+</span>
+              <span class="stat-label" data-en="Completed Projects">Proyectos Completados</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-value"><span class="stat-num" data-target="5">0</span>+</span>
+              <span class="stat-label" data-en="Years of Experience">Años de Experiencia</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-value"><span class="stat-num" data-target="70">0</span>%</span>
+              <span class="stat-label" data-en="Less Manual QA">Menos QA Manual</span>
             </div>
           </div>
         </div>
+
+      </div>
+    </div>
+
+    <div class="hero-marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Claude Code</span><span class="m-sep">✦</span>
+        <span>Antigravity</span><span class="m-sep">✦</span>
+        <span>Pentesting</span><span class="m-sep">✦</span>
+        <span>n8n</span><span class="m-sep">✦</span>
+        <span>Playwright</span><span class="m-sep">✦</span>
+        <span>Go</span><span class="m-sep">✦</span>
+        <span>React</span><span class="m-sep">✦</span>
+        <span>TypeScript</span><span class="m-sep">✦</span>
+        <span>OSINT</span><span class="m-sep">✦</span>
+        <span>Docker</span><span class="m-sep">✦</span>
+        <span>Burp Suite</span><span class="m-sep">✦</span>
+        <span>Python</span><span class="m-sep">✦</span>
+        <span>Claude Code</span><span class="m-sep">✦</span>
+        <span>Antigravity</span><span class="m-sep">✦</span>
+        <span>Pentesting</span><span class="m-sep">✦</span>
+        <span>n8n</span><span class="m-sep">✦</span>
+        <span>Playwright</span><span class="m-sep">✦</span>
+        <span>Go</span><span class="m-sep">✦</span>
+        <span>React</span><span class="m-sep">✦</span>
+        <span>TypeScript</span><span class="m-sep">✦</span>
+        <span>OSINT</span><span class="m-sep">✦</span>
+        <span>Docker</span><span class="m-sep">✦</span>
+        <span>Burp Suite</span><span class="m-sep">✦</span>
+        <span>Python</span><span class="m-sep">✦</span>
       </div>
     </div>
   </section>
@@ -86,70 +159,52 @@
   <!-- PILLARS SECTION -->
   <section class="section" id="pilares">
     <div class="container">
-      <h2 class="section-title reveal-up" data-en="Areas of Expertise">Áreas de Especialización</h2>
+      <div class="section-head reveal-up">
+        <span class="section-num">01</span>
+        <div class="section-head-text">
+          <span class="section-eyebrow" data-en="// expertise">// especialidades</span>
+          <h2 class="section-title" data-en="Areas of Expertise">Áreas de Especialización</h2>
+        </div>
+      </div>
       <div class="pillars-grid">
 
-        <!-- Pillar AI and Agentic -->
-        <div class="glass-card pillar-card pillar-ai reveal-up">
+        <!-- Pillar Web Development -->
+        <div class="glass-card pillar-card pillar-web reveal-up">
           <div class="pillar-icon">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
-              <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
-              <line x1="12" y1="22.08" x2="12" y2="12"></line>
+              <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+              <polyline points="2 17 12 22 22 17"></polyline>
+              <polyline points="2 12 12 17 22 12"></polyline>
             </svg>
           </div>
-          <h3 class="pillar-title gradient-ai" data-en="AI and LLM Agents">IA y Agentes LLM</h3>
-          <p class="pillar-desc" data-en="I build autonomous systems and complex workflows using advanced LLMs. Expert in lifecycle development optimization with AI agents.">
-            Desarrollo sistemas autónomos y flujos complejos usando LLMs avanzados. Experto en optimización del ciclo de desarrollo con agentes de IA.
+          <h3 class="pillar-title gradient-web" data-en="Web & Mobile Development">Desarrollo Web y Móvil</h3>
+          <p class="pillar-desc" data-en="Creating high-performance responsive web applications using modern architectures, ensuring premium UX, styling, and fast loading.">
+            Creación de aplicaciones web responsivas de alto rendimiento usando arquitecturas modernas, garantizando una UX premium, estilos limpios y carga rápida.
           </p>
           <div class="pillar-bullets">
             <div class="pillar-bullet">
               <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-              <span data-en="Expert usage of the <strong>Claude</strong> ecosystem">Uso experto del ecosistema de <strong>Claude</strong></span>
+              <span data-en="Modern frontend with <strong>React</strong> and <strong>Vite</strong>">Frontend moderno con <strong>React</strong> y <strong>Vite</strong></span>
             </div>
             <div class="pillar-bullet">
               <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-              <span data-en="Agent orchestration using <strong>Antigravity</strong>">Orquestación de agentes con <strong>Antigravity</strong></span>
+              <span data-en="Web page design with <strong>Claude (AI Design)</strong>">Diseño de páginas web con <strong>Claude (Diseño IA)</strong></span>
             </div>
             <div class="pillar-bullet">
               <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-              <span data-en="Prompt Engineering and Tool Calling">Ingeniería de Prompts y Tool Calling</span>
+              <span data-en="Backend development in <strong>Go (Golang)</strong>">Desarrollo backend en <strong>Go (Golang)</strong></span>
             </div>
             <div class="pillar-bullet">
               <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-              <span data-en="Local <strong>uncensored LLMs</strong> with agents (Llama, Qwen)">Modelos <strong>LLM locales sin censura</strong> con agentes (Llama, Qwen)</span>
+              <span data-en="Cross-platform mobile development with <strong>React Native</strong>">Desarrollo móvil multiplataforma con <strong>React Native</strong></span>
             </div>
             <div class="pillar-bullet">
               <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-              <span data-en="Workflows and automations using <strong>n8n</strong> and AI agents">Flujos y automatizaciones con <strong>n8n</strong> y agentes de IA</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Pillar Cybersecurity -->
-        <div class="glass-card pillar-card pillar-cyber reveal-up">
-          <div class="pillar-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
-              <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
-            </svg>
-          </div>
-          <h3 class="pillar-title gradient-cyber" data-en="Cybersecurity">Ciberseguridad</h3>
-          <p class="pillar-desc" data-en="Code auditing, OSINT research, and computer forensics to safeguard web applications and digital integrity.">
-            Auditoría de código, investigación en OSINT e informática forense para proteger aplicaciones web y asegurar la integridad digital.
-          </p>
-          <div class="pillar-bullets">
-            <div class="pillar-bullet">
-              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-              <span data-en="Pentesting and OWASP Top 10 Auditing">Pruebas de Pentesting y OWASP Top 10</span>
+              <span data-en="Programming in <strong>Java, Python, Go and JavaScript</strong>">Programación en <strong>Java, Python, Go y JavaScript</strong></span>
             </div>
             <div class="pillar-bullet">
               <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-              <span data-en="OSINT investigations and gathering">Búsqueda e investigación con OSINT</span>
-            </div>
-            <div class="pillar-bullet">
-              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-              <span data-en="Computer Forensics and Analysis">Informática Forense y Análisis</span>
+              <span data-en="Deployment with <strong>VPS, Docker and GitHub</strong>">Despliegue con <strong>VPS, Docker y GitHub</strong></span>
             </div>
           </div>
         </div>
@@ -189,35 +244,71 @@
           </div>
         </div>
 
-        <!-- Pillar Web Development -->
-        <div class="glass-card pillar-card pillar-web reveal-up">
+        <!-- Pillar Cybersecurity -->
+        <div class="glass-card pillar-card pillar-cyber reveal-up">
           <div class="pillar-icon">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
-              <polyline points="2 17 12 22 22 17"></polyline>
-              <polyline points="2 12 12 17 22 12"></polyline>
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+              <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
             </svg>
           </div>
-          <h3 class="pillar-title gradient-web" data-en="Web & Mobile Development">Desarrollo Web y Móvil</h3>
-          <p class="pillar-desc" data-en="Creating high-performance responsive web applications using modern architectures, ensuring premium UX, styling, and fast loading.">
-            Creación de aplicaciones web responsivas de alto rendimiento usando arquitecturas modernas, garantizando una UX premium, estilos limpios y carga rápida.
+          <h3 class="pillar-title gradient-cyber" data-en="Cybersecurity">Ciberseguridad</h3>
+          <p class="pillar-desc" data-en="Code auditing, OSINT research, and computer forensics to safeguard web applications and digital integrity.">
+            Auditoría de código, investigación en OSINT e informática forense para proteger aplicaciones web y asegurar la integridad digital.
           </p>
           <div class="pillar-bullets">
             <div class="pillar-bullet">
               <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-              <span data-en="Modern frontend with <strong>React</strong> and <strong>Vite</strong>">Frontend moderno con <strong>React</strong> y <strong>Vite</strong></span>
+              <span data-en="Pentesting and OWASP Top 10 Auditing">Pruebas de Pentesting y OWASP Top 10</span>
             </div>
             <div class="pillar-bullet">
               <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-              <span data-en="Backend development in <strong>Go (Golang)</strong>">Desarrollo backend en <strong>Go (Golang)</strong></span>
+              <span data-en="OSINT investigations and gathering">Búsqueda e investigación con OSINT</span>
             </div>
             <div class="pillar-bullet">
               <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-              <span data-en="Integration of custom REST APIs">Integración de APIs REST personalizadas</span>
+              <span data-en="Computer Forensics and Analysis">Informática Forense y Análisis</span>
             </div>
             <div class="pillar-bullet">
               <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-              <span data-en="Cross-platform mobile development with <strong>React Native</strong>">Desarrollo móvil multiplataforma con <strong>React Native</strong></span>
+              <span data-en="Controlled phishing campaigns (awareness)">Campañas de phishing controladas (awareness)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pillar AI and Agentic -->
+        <div class="glass-card pillar-card pillar-ai reveal-up">
+          <div class="pillar-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+              <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+              <line x1="12" y1="22.08" x2="12" y2="12"></line>
+            </svg>
+          </div>
+          <h3 class="pillar-title gradient-ai" data-en="AI and LLM Agents">IA y Agentes LLM</h3>
+          <p class="pillar-desc" data-en="I build autonomous systems and complex workflows using advanced LLMs. Expert in lifecycle development optimization with AI agents.">
+            Desarrollo sistemas autónomos y flujos complejos usando LLMs avanzados. Experto en optimización del ciclo de desarrollo con agentes de IA.
+          </p>
+          <div class="pillar-bullets">
+            <div class="pillar-bullet">
+              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <span data-en="Mastery of <strong>Claude, Gemini and GPT-OSS</strong>">Dominio de <strong>Claude, Gemini y GPT-OSS</strong></span>
+            </div>
+            <div class="pillar-bullet">
+              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <span data-en="Agent orchestration using <strong>Antigravity</strong>">Orquestación de agentes con <strong>Antigravity</strong></span>
+            </div>
+            <div class="pillar-bullet">
+              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <span data-en="Prompt Engineering and Tool Calling">Ingeniería de Prompts y Tool Calling</span>
+            </div>
+            <div class="pillar-bullet">
+              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <span data-en="Local <strong>uncensored LLMs</strong> with agents (Llama, Qwen)">Modelos <strong>LLM locales sin censura</strong> con agentes (Llama, Qwen)</span>
+            </div>
+            <div class="pillar-bullet">
+              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <span data-en="Workflows and automations using <strong>n8n</strong> and AI agents">Flujos y automatizaciones con <strong>n8n</strong> y agentes de IA</span>
             </div>
           </div>
         </div>
@@ -229,7 +320,13 @@
   <!-- SKILLS MATRIX SECTION -->
   <section class="section" id="habilidades">
     <div class="container">
-      <h2 class="section-title reveal-up" data-en="Technical Skills">Habilidades Técnicas</h2>
+      <div class="section-head reveal-up">
+        <span class="section-num">02</span>
+        <div class="section-head-text">
+          <span class="section-eyebrow" data-en="// tech stack">// stack técnico</span>
+          <h2 class="section-title" data-en="Technical Skills">Habilidades Técnicas</h2>
+        </div>
+      </div>
       <div class="skills-grid">
 
         <!-- Skill Group AI, Web Dev and QA -->
@@ -328,9 +425,16 @@
           <div class="tools-container">
             <div class="tool-badge special">Antigravity SDK</div>
             <div class="tool-badge special">Claude Code</div>
+            <div class="tool-badge special">Gemini</div>
+            <div class="tool-badge special">GPT-OSS</div>
+            <div class="tool-badge special">Claude Diseño</div>
             <div class="tool-badge special">n8n</div>
             <div class="tool-badge special">Codex</div>
             <div class="tool-badge">OpenCode</div>
+            <div class="tool-badge">WhatsApp API</div>
+            <div class="tool-badge">Java</div>
+            <div class="tool-badge">Python</div>
+            <div class="tool-badge">TypeScript</div>
             <div class="tool-badge">Go (Golang)</div>
             <div class="tool-badge">React</div>
             <div class="tool-badge">Playwright</div>
@@ -338,6 +442,8 @@
             <div class="tool-badge">Burp Suite</div>
             <div class="tool-badge">Nmap</div>
             <div class="tool-badge">Docker</div>
+            <div class="tool-badge">VPS</div>
+            <div class="tool-badge">GitHub</div>
             <div class="tool-badge">GitHub Actions</div>
             <div class="tool-badge">Jest</div>
             <div class="tool-badge">Node.js</div>
@@ -363,19 +469,26 @@
   <!-- PROJECTS SECTION -->
   <section class="section" id="proyectos">
     <div class="container">
-      <h2 class="section-title reveal-up" data-en="Featured Projects">Proyectos Destacados</h2>
+      <div class="section-head reveal-up">
+        <span class="section-num">03</span>
+        <div class="section-head-text">
+          <span class="section-eyebrow" data-en="// selected work">// trabajo seleccionado</span>
+          <h2 class="section-title" data-en="Featured Projects">Proyectos Destacados</h2>
+        </div>
+      </div>
 
       <div class="projects-filters reveal-up">
         <button class="filter-btn active" data-filter="all" data-en="All">Todos</button>
+        <button class="filter-btn" data-filter="web" data-en="Web and Games">Web y Juegos</button>
+        <button class="filter-btn" data-filter="qa" data-en="QA Automation">QA Automation</button>
         <button class="filter-btn" data-filter="cyber" data-en="Cybersecurity">Ciberseguridad</button>
         <button class="filter-btn" data-filter="ai" data-en="AI and Agents">IA y Agentes</button>
-        <button class="filter-btn" data-filter="qa" data-en="QA Automation">QA Automation</button>
       </div>
 
       <div class="projects-grid">
 
         <!-- Project 10 (Full-Stack Ecommerce) -->
-        <div class="glass-card project-card reveal-up" data-category="qa" id="proj-10">
+        <div class="glass-card project-card reveal-up" data-category="web" id="proj-10">
           <div class="project-meta">
             <span class="project-tag tag-web" data-en="Full-Stack Web">Full-Stack Web</span>
             <div class="project-links">
@@ -399,9 +512,9 @@
         </div>
 
         <!-- Project 1 (MortalSoft Casino Suite) -->
-        <div class="glass-card project-card reveal-up" data-category="cyber" id="proj-1">
+        <div class="glass-card project-card reveal-up" data-category="web" id="proj-1">
           <div class="project-meta">
-            <span class="project-tag tag-cyber" data-en="Dev and QA">Desarrollo y QA</span>
+            <span class="project-tag tag-web" data-en="Game Development">Desarrollo de Juegos</span>
             <div class="project-links">
               <a href="https://github.com/LUCKYTANO765" target="_blank" rel="noopener" class="project-link-icon" title="Ver código en GitHub">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -447,9 +560,9 @@
         </div>
 
         <!-- Project 3 (SuperCasino365) -->
-        <div class="glass-card project-card reveal-up" data-category="qa" id="proj-3">
+        <div class="glass-card project-card reveal-up" data-category="web" id="proj-3">
           <div class="project-meta">
-            <span class="project-tag tag-qa" data-en="Dev and QA">Desarrollo y QA</span>
+            <span class="project-tag tag-web" data-en="Full-Stack Dev">Desarrollo Full-Stack</span>
             <div class="project-links">
               <a href="https://github.com/LUCKYTANO765/supercasino365" target="_blank" rel="noopener" class="project-link-icon" title="Ver código en GitHub">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -459,21 +572,21 @@
             </div>
           </div>
           <h3 class="project-title">SuperCasino365</h3>
-          <p class="project-desc" data-en="Virtual casino platform featuring interactive games like Blackjack in React and TypeScript, Go backend, and E2E QA automated testing using Playwright.">
-            Plataforma de casino virtual con juegos interactivos como Blackjack desarrollados en React y TypeScript. Cuenta con backend en Go y suite completa de pruebas de calidad automatizadas (QA E2E) con Playwright.
+          <p class="project-desc" data-en="Full casino platform with multiple games including Poker, Blackjack and Slots, plus a role system to create cashiers and clients. Backend migrated from Node.js/Prisma to Go for performance, deployed on a VPS, with E2E QA testing in Playwright.">
+            Plataforma de casino completa con múltiples juegos incluyendo Póker, Blackjack y Slots, más un sistema de roles para crear cajeros y clientes. Backend migrado de Node.js/Prisma a Go por rendimiento, desplegado en VPS, con pruebas QA E2E en Playwright.
           </p>
           <div class="project-techs">
             <span class="project-tech">React</span>
             <span class="project-tech">Go (Golang)</span>
-            <span class="project-tech">TypeScript</span>
             <span class="project-tech">Playwright</span>
+            <span class="project-tech">VPS Deploy</span>
           </div>
         </div>
 
         <!-- Project 4 (GameDev Tower Rush 3D) -->
-        <div class="glass-card project-card reveal-up" data-category="cyber" id="proj-4">
+        <div class="glass-card project-card reveal-up" data-category="web" id="proj-4">
           <div class="project-meta">
-            <span class="project-tag tag-cyber" data-en="3D Development">Desarrollo 3D</span>
+            <span class="project-tag tag-web" data-en="3D Development">Desarrollo 3D</span>
             <div class="project-links">
               <a href="https://github.com/LUCKYTANO765" target="_blank" rel="noopener" class="project-link-icon" title="Ver código en GitHub">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -530,15 +643,15 @@
               </a>
             </div>
           </div>
-          <h3 class="project-title">Century 21 Job Automator</h3>
-          <p class="project-desc" data-en="Automated n8n recruitment workflows for Century 21. Searches job listings, filters applicant pools, and simplifies communications 100% autonomously.">
-            Flujos de trabajo automatizados en n8n para Century 21 que buscan empleos, filtran perfiles de postulantes y agilizan la contratación de forma 100% autónoma.
+          <h3 class="project-title" data-en="WhatsApp Recruiting Bot — Century 21">Bot de Reclutamiento WhatsApp — Century 21</h3>
+          <p class="project-desc" data-en="Automated recruiting bot built with n8n for Century 21: it finds candidates, screens profiles and manages the hiring conversation directly through WhatsApp, 100% autonomously.">
+            Bot de reclutamiento automatizado con n8n para Century 21: busca candidatos, filtra perfiles y gestiona la conversación de contratación directamente por WhatsApp, de forma 100% autónoma.
           </p>
           <div class="project-techs">
             <span class="project-tech">n8n</span>
-            <span class="project-tech">Workflows</span>
+            <span class="project-tech">WhatsApp API</span>
+            <span class="project-tech">AI Agents</span>
             <span class="project-tech">APIs REST</span>
-            <span class="project-tech">JSON</span>
           </div>
         </div>
 
@@ -590,10 +703,58 @@
           </div>
         </div>
 
-        <!-- Project 9 (Medical Landing Page and Sports) -->
-        <div class="glass-card project-card reveal-up" data-category="qa" id="proj-9">
+        <!-- Project 11 (OSINT & Pentesting Ops) -->
+        <div class="glass-card project-card reveal-up" data-category="cyber" id="proj-11">
           <div class="project-meta">
-            <span class="project-tag tag-qa" data-en="Web Premium">Web Premium</span>
+            <span class="project-tag tag-cyber" data-en="Offensive Security">Seguridad Ofensiva</span>
+            <div class="project-links">
+              <a href="https://github.com/LUCKYTANO765" target="_blank" rel="noopener" class="project-link-icon" title="Ver código en GitHub">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title" data-en="OSINT &amp; Pentesting Operations">Operaciones OSINT y Pentesting</h3>
+          <p class="project-desc" data-en="OSINT reconnaissance, web penetration testing and controlled phishing campaigns for security awareness. Includes computer forensics and application audits using Burp Suite, OWASP ZAP and Nmap.">
+            Reconocimiento OSINT, pruebas de penetración web y campañas de phishing controladas para concientización en seguridad. Incluye informática forense y auditorías de aplicaciones con Burp Suite, OWASP ZAP y Nmap.
+          </p>
+          <div class="project-techs">
+            <span class="project-tech">Burp Suite</span>
+            <span class="project-tech">OWASP ZAP</span>
+            <span class="project-tech">Nmap</span>
+            <span class="project-tech">Python</span>
+          </div>
+        </div>
+
+        <!-- Project 12 (Pax Medica Landing) -->
+        <div class="glass-card project-card reveal-up" data-category="web" id="proj-12">
+          <div class="project-meta">
+            <span class="project-tag tag-web" data-en="Medical Landing">Landing Médica</span>
+            <div class="project-links">
+              <a href="https://github.com/LUCKYTANO765" target="_blank" rel="noopener" class="project-link-icon" title="Ver código en GitHub">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">Pax Médica</h3>
+          <p class="project-desc" data-en="High-converting landing page for a plastic surgery clinic: aesthetic procedures and weight-loss injection treatments. Focus on trust, premium visuals, appointment booking and mobile-first performance.">
+            Landing page de alta conversión para clínica de cirugía plástica: procedimientos estéticos y tratamientos de inyecciones para bajar de peso. Enfocada en confianza, visual premium, reserva de citas y rendimiento mobile-first.
+          </p>
+          <div class="project-techs">
+            <span class="project-tech">React</span>
+            <span class="project-tech">TailwindCSS</span>
+            <span class="project-tech">Responsive</span>
+            <span class="project-tech">SEO</span>
+          </div>
+        </div>
+
+        <!-- Project 9 (Medical Landing Page and Sports) -->
+        <div class="glass-card project-card reveal-up" data-category="web" id="proj-9">
+          <div class="project-meta">
+            <span class="project-tag tag-web" data-en="Web Premium">Web Premium</span>
             <div class="project-links">
               <a href="https://github.com/LUCKYTANO765" target="_blank" rel="noopener" class="project-link-icon" title="Ver código en GitHub">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -621,7 +782,13 @@
   <!-- TIMELINE SECTION -->
   <section class="section" id="trayectoria">
     <div class="container">
-      <h2 class="section-title reveal-up" data-en="Timeline and Achievements">Trayectoria y Logros</h2>
+      <div class="section-head reveal-up">
+        <span class="section-num">04</span>
+        <div class="section-head-text">
+          <span class="section-eyebrow" data-en="// experience">// experiencia</span>
+          <h2 class="section-title" data-en="Timeline and Achievements">Trayectoria y Logros</h2>
+        </div>
+      </div>
       <div class="timeline">
 
         <!-- Timeline Item 1 -->
@@ -670,7 +837,13 @@
   <!-- CONTACT SECTION -->
   <section class="section" id="contacto">
     <div class="container">
-      <h2 class="section-title reveal-up" data-en="Let's Start a Project">Iniciemos un Proyecto</h2>
+      <div class="section-head reveal-up">
+        <span class="section-num">05</span>
+        <div class="section-head-text">
+          <span class="section-eyebrow" data-en="// contact">// contacto</span>
+          <h2 class="section-title" data-en="Let's Start a Project">Iniciemos un Proyecto</h2>
+        </div>
+      </div>
       <div class="contact-grid">
 
         <!-- Info Column -->
@@ -740,18 +913,22 @@
 
         <!-- Form Column -->
         <div class="glass-card reveal-up">
-          <form class="contact-form" id="contact-form">
+          <form class="contact-form" id="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="contact">
+            <p class="hidden-field">
+              <label>No llenar si eres humano: <input name="bot-field"></label>
+            </p>
             <div class="form-group">
               <label for="form-name" class="form-label" data-en="Name">Nombre</label>
-              <input type="text" id="form-name" class="form-control" placeholder="Tu nombre" data-es-placeholder="Tu nombre" data-en-placeholder="Your name" required>
+              <input type="text" id="form-name" name="name" class="form-control" placeholder="Tu nombre" data-es-placeholder="Tu nombre" data-en-placeholder="Your name" required>
             </div>
             <div class="form-group">
               <label for="form-email" class="form-label" data-en="Email">Email</label>
-              <input type="email" id="form-email" class="form-control" placeholder="tu@email.com" data-es-placeholder="tu@email.com" data-en-placeholder="you@email.com" required>
+              <input type="email" id="form-email" name="email" class="form-control" placeholder="tu@email.com" data-es-placeholder="tu@email.com" data-en-placeholder="you@email.com" required>
             </div>
             <div class="form-group">
               <label for="form-msg" class="form-label" data-en="Message">Mensaje</label>
-              <textarea id="form-msg" rows="5" class="form-control" placeholder="¿Cómo puedo ayudarte?" data-es-placeholder="¿Cómo puedo ayudarte?" data-en-placeholder="How can I help you?" required></textarea>
+              <textarea id="form-msg" name="message" rows="5" class="form-control" placeholder="¿Cómo puedo ayudarte?" data-es-placeholder="¿Cómo puedo ayudarte?" data-en-placeholder="How can I help you?" required></textarea>
             </div>
             <button type="submit" class="btn btn-primary form-btn" id="btn-submit-form" data-en="Send Message">Enviar Mensaje</button>
             <div class="form-status" id="form-status-msg"></div>
@@ -765,17 +942,38 @@
   <!-- FOOTER -->
   <footer class="footer">
     <div class="container">
-      <div class="footer-links">
-        <a href="#inicio" class="footer-link" data-en="Home">Inicio</a>
-        <a href="#pilares" class="footer-link" data-en="Expertise">Especialidades</a>
-        <a href="#habilidades" class="footer-link" data-en="Skills">Habilidades</a>
-        <a href="#proyectos" class="footer-link" data-en="Projects">Proyectos</a>
-        <a href="#trayectoria" class="footer-link" data-en="Timeline">Trayectoria</a>
-        <a href="https://github.com/LUCKYTANO765" target="_blank" rel="noopener" class="footer-link">GitHub</a>
+      <div class="footer-cta reveal-up">
+        <span class="section-eyebrow" data-en="// next step">// siguiente paso</span>
+        <h2 class="footer-cta-title" data-en="Got a project<br>in mind?">¿Tienes un proyecto<br>en mente?</h2>
+        <a href="#contacto" class="footer-cta-link">
+          <span data-en="Let's talk">Hablemos</span>
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="7" y1="17" x2="17" y2="7"></line>
+            <polyline points="7 7 17 7 17 17"></polyline>
+          </svg>
+        </a>
       </div>
-      <p data-en="Designed and Developed with Antigravity and Claude. © 2026. All rights reserved.">Diseñado y Desarrollado con Antigravity y Claude. © 2026. Todos los derechos reservados.</p>
+
+      <div class="footer-bottom">
+        <div class="footer-links">
+          <a href="#inicio" class="footer-link" data-en="Home">Inicio</a>
+          <a href="#pilares" class="footer-link" data-en="Expertise">Especialidades</a>
+          <a href="#habilidades" class="footer-link" data-en="Skills">Habilidades</a>
+          <a href="#proyectos" class="footer-link" data-en="Projects">Proyectos</a>
+          <a href="#trayectoria" class="footer-link" data-en="Timeline">Trayectoria</a>
+          <a href="https://github.com/LUCKYTANO765" target="_blank" rel="noopener" class="footer-link">GitHub</a>
+        </div>
+        <p data-en="Designed and developed by Dorian Flores Burgoa. © 2026. All rights reserved.">Diseñado y desarrollado por Dorian Flores Burgoa. © 2026. Todos los derechos reservados.</p>
+      </div>
     </div>
   </footer>
+
+  <!-- Back To Top -->
+  <button id="back-to-top" class="back-to-top" aria-label="Volver arriba / Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
 
   <script src="script.js"></script>
 </body>

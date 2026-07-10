@@ -1,4 +1,4 @@
-# Dorian Flores — Full-Stack Software Engineer Portfolio
+# Dorian Flores — Full-Stack Computer Engineer Portfolio
 
 Welcome to my personal portfolio repository. This is a premium, interactive, and fully responsive website showcasing my expertise in building high-performance, real-time, and scalable full-stack web applications.
 
