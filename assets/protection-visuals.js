@@ -58,7 +58,7 @@
         ${route('M394 213h58V168h62', 500)}
         <g clip-path="url(#${uid}-phone-screen)"><g class="ps-device-review"><rect class="ps-review-band" x="527" y="144" width="75" height="22"/>${path('M529 166h72', 'ps-amber')}</g></g>
         ${group(lens(565, 183, 31, 'ps-device-lens'), '', 450)}
-        ${label(98, 77, 'Computadora')}${label(507, 56, 'Teléfono')}${label(116, 387, 'Cuentas y accesos')}${label(472, 387, 'Permisos')}`;
+        ${label(98, 77, 'Computadora')}${label(507, 56, 'Teléfono')}${label(116, 387, 'Blindaje y cifrado')}${label(472, 387, 'Anti-extracción')}`;
     },
 
     conversaciones() {
@@ -66,7 +66,7 @@
         ${route('M214 181H505', 600)}${route('M505 260H214', 2000)}
         ${group(bubble(252, 120, 110, 'ps-message-outgoing'), '', 240)}${group(bubble(370, 280, 108, 'ps-message-incoming', true), '', 370)}
         ${group(`${circle(360, 220, 44, 'ps-channel-seal')}${lock(360, 209, .95)}`, '', 450)}
-        ${label(89, 63, 'Tu dispositivo')}${label(508, 63, 'Tu contacto')}${label(184, 392, 'Contenido privado y accesos revisados')}`;
+        ${label(89, 63, 'Tu dispositivo')}${label(508, 63, 'Tu contacto')}${label(184, 392, 'Canal blindado y anti-intercepción')}`;
     },
 
     ubicacion(uid) {
@@ -77,14 +77,14 @@
         ${route('M235 250h38v-29h154', 600)}
         ${group(`<g class="ps-location-clue"><path class="ps-pin" d="M448 163a23 23 0 0 0-23 23c0 18 23 42 23 42s23-24 23-42a23 23 0 0 0-23-23Z"/>${circle(448, 186, 7, 'ps-pin-center')}</g>`, '', 300)}
         ${group(lens(500, 240, 42, 'ps-location-lens'), '', 440)}
-        ${label(86, 63, 'Publicaciones')}${label(99, 388, 'Fotos y aplicaciones')}${label(383, 388, 'Ubicación expuesta')}`;
+        ${label(86, 63, 'Publicaciones')}${label(99, 388, 'Fotos y aplicaciones')}${label(383, 388, 'Rastreo neutralizado')}`;
     },
 
     reuniones() {
       return `${group(`${path('M605 258V89H95v254h510v-20', 'ps-floorplan')}${path('M605 323h-65a65 65 0 0 1 65-65', 'ps-door-swing')}${path('M141 89h119M422 89h122', 'ps-window-line')}`)}
         ${group(`${[220, 330, 440].map(x => `${rect(x, 130, 54, 29, 'ps-chair', 5)}${rect(x, 275, 54, 29, 'ps-chair', 5)}`).join('')}${rect(196, 168, 324, 100, 'ps-meeting-table', 10)}${rect(220, 193, 54, 47, 'ps-paper', 3)}${path('M228 204h36M228 217h29M228 230h34', 'ps-paper-line')}${rect(431, 190, 28, 53, 'ps-handset', 5)}${circle(359, 218, 15, 'ps-microphone')}${circle(359, 218, 6, 'ps-teal')}`, '', 150)}
         ${group(lens(520, 207, 39, 'ps-room-inspection'), '', 450)}
-        ${label(97, 56, 'Sala de reuniones')}${label(113, 389, 'Espacio y dispositivos')}${label(494, 389, 'Accesos')}`;
+        ${label(97, 56, 'Sala de reuniones')}${label(113, 389, 'Barrido y micrófonos')}${label(494, 389, 'Espacio seguro')}`;
     },
 
     filtraciones() {
