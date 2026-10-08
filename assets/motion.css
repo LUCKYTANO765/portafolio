@@ -1,0 +1,76 @@
+/* The information stays still while illustrations and transitions carry the motion. */
+.page { position: relative; animation: workspace-arrive .35s ease both; }
+.page::before { content: ''; pointer-events: none; position: absolute; top: 0; left: 0; right: 0; height: 2px; z-index: 4; background: linear-gradient(90deg, transparent, var(--accent), #edf1d9, transparent); transform-origin: left; animation: route-signal 1s cubic-bezier(.2,.7,.3,1) both; }
+.title-line { display: block; overflow: hidden; padding-bottom: .1em; margin-bottom: -.1em; }
+.title-line > span { display: block; animation: title-unfold .85s cubic-bezier(.16,1,.3,1) both; animation-delay: calc(var(--line-order, 0) * 120ms + 70ms); }
+.cover { background: radial-gradient(ellipse at 50% 85%, #8c583015, transparent 64%), #141617; }
+.cover h1 { font-weight: 600; }
+.cover h1 > .title-line:last-child > span { color: transparent; background: linear-gradient(110deg, #b3bdae 0%, #edbb8e 35%, #f6ece1 48%, #b3bdae 66%); background-size: 220% 100%; background-clip: text; -webkit-background-clip: text; animation: title-unfold .85s cubic-bezier(.16,1,.3,1) 190ms both, name-light 14s ease-in-out 1.2s infinite; }
+.cover .eyebrow { animation: content-arrive .7s ease both; }
+.cover-description { animation: content-arrive .65s ease .32s both; }
+.cover-links { animation: content-arrive .65s ease .45s both; }
+.cover-links a { position: relative; transition: color .2s; }
+.cover-links a::after { content: ''; position: absolute; bottom: -1px; left: 0; width: 100%; height: 1px; background: var(--accent); transform: scaleX(0); transform-origin: left; transition: transform .3s; }
+.cover-links a:hover::after { transform: scaleX(1); }
+.terrain { height: 300px; bottom: -24px; animation: terrain-arrive 1.3s cubic-bezier(.2,.8,.3,1) .25s both; }
+.cover-bottom span:first-child::before { content: ''; display: inline-block; height: 5px; width: 5px; margin-right: 8px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 10px #f5a26755; animation: subtle-beacon 5s ease-in-out infinite; }
+.page-intro .eyebrow, .page-intro .intro-count { animation: content-arrive .5s ease both; }
+.page-intro .summary { animation: content-arrive .65s ease .22s both; }
+.discipline-group { margin-top: 38px; }
+.group-heading { display: flex; align-items: flex-start; gap: 17px; padding-bottom: 24px; }
+.group-heading > span { font: 10px var(--mono); color: var(--accent); border: 1px solid #5e4a35; padding: 7px; }
+.group-heading h3 { font-size: 15px; letter-spacing: -.2px; font-weight: 600; margin: 1px 0 7px; }
+.group-heading p { margin: 0; color: #929d8d; font-size: 11px; line-height: 1.8; }
+.discipline-row, .project-row { position: relative; }
+.discipline-row::after, .project-row::after { content: ''; position: absolute; bottom: -1px; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, var(--accent), transparent); transform: scaleX(0); transform-origin: left; transition: transform .45s; }
+.discipline-row:hover::after, .project-row:hover::after { transform: scaleX(1); }
+.discipline-row > span:last-child, .project-row > span:last-child { transition: transform .3s, color .3s; }
+.discipline-row:hover > span:last-child, .project-row:hover > span:last-child { transform: translate(3px, -3px); color: #ffe0b8; }
+.scroll-reveal { opacity: 0; transform: translateY(15px); transition: opacity .55s ease var(--reveal-delay, 0ms), transform .6s cubic-bezier(.2,.8,.3,1) var(--reveal-delay, 0ms), background .2s, padding .3s; }
+.scroll-reveal.is-revealed { opacity: 1; transform: none; }
+.scroll-reveal:focus-within, .scroll-reveal:focus { opacity: 1; transform: none; }
+.area-crosslink { display: flex; gap: 18px; align-items: center; margin-bottom: 24px; padding: 18px 0; border-top: 1px solid var(--line); font-size: 11px; color: #d5d7c9; }
+.area-crosslink > span { font: 7px var(--mono); color: var(--faint); }
+.area-crosslink > b { margin-left: auto; color: var(--accent); }
+.area-crosslink:hover { color: var(--accent); }
+.method-panel { grid-template-columns: 1fr 1.12fr; gap: 35px; min-height: 370px; align-items: center; }
+.method-diagram { padding: 24px 14px 14px; min-height: 315px; border-color: #5a5645; border-radius: 4px; background: radial-gradient(ellipse at 50% 70%, #34413330, transparent 75%), #0c100f; perspective: 950px; }
+.method-diagram::after { content: ''; pointer-events: none; position: absolute; inset: 0; background: radial-gradient(circle at var(--light-x,50%) var(--light-y,50%), #f5a26712, transparent 60%); opacity: 0; transition: opacity .4s; }
+.method-diagram.pointer-active::after { opacity: 1; }
+.method-diagram .diagram-label { font-size: 6px; color: #b1bca4; letter-spacing: 1.1px; top: 15px; left: 17px; z-index: 3; }
+.diagram-holo { transform: rotateX(var(--tilt-x,0deg)) rotateY(var(--tilt-y,0deg)); transition: transform .25s ease-out; }
+.diagram-legend { position: relative; display: flex; gap: 12px; flex-wrap: wrap; justify-content: space-between; margin: 4px 3px 0; border-top: 1px solid #2f392c; padding-top: 13px; font: 6px/1.8 var(--mono); color: #b0b9a5; }
+.discipline-tabs button { transition: color .2s; }
+.discipline-tabs button[aria-selected=true]::after { animation: tab-underline .3s ease both; transform-origin: left; }
+.action-button { position: relative; overflow: hidden; }
+.action-button::after { content: ''; position: absolute; top: -50%; bottom: -50%; left: -30%; width: 20%; background: #fff5; transform: rotate(20deg); transition: left .65s; }
+.action-button:hover::after { left: 125%; }
+.sidebar { padding-top: 24px; scrollbar-width: thin; scrollbar-color: #5b5745 #101311; }
+.identity-mark { margin-bottom: 12px; }
+.rail-caption { margin: 28px 0 12px; }
+.nav-label { margin: 17px 10px 6px; line-height: 1.5; }
+.sidebar nav a { padding-block: 10px; }
+.sidebar nav a[aria-current=page]::before { animation: rail-arrive .35s ease both; }
+#project-dossier[open] { animation: dossier-enter .45s cubic-bezier(.16,1,.3,1) both; }
+#project-dossier[open] > h2, #project-dossier[open] > p, #project-dossier[open] > .tokens, #project-dossier[open] > .dossier-access { animation: content-arrive .5s ease .12s both; }
+.page-hidden *, .page-hidden *::before, .page-hidden *::after { animation-play-state: paused !important; }
+@keyframes workspace-arrive { from { opacity: .35; } to { opacity: 1; } }
+@keyframes title-unfold { from { opacity: 0; transform: translateY(105%) rotate(1deg); } to { opacity: 1; transform: translateY(0) rotate(0); } }
+@keyframes content-arrive { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+@keyframes terrain-arrive { from { opacity: 0; transform: translateY(40px) scale(.98); } to { opacity: 1; transform: none; } }
+@keyframes route-signal { 0% { transform: scaleX(0); opacity: 1; } 65% { transform: scaleX(1); opacity: .85; } 100% { transform: scaleX(1); opacity: 0; } }
+@keyframes name-light { 0%,100% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } }
+@keyframes subtle-beacon { 0%,100% { opacity: .45; } 50% { opacity: 1; } }
+@keyframes tab-underline { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+@keyframes rail-arrive { from { opacity: .2; transform: scaleY(.3); } to { opacity: 1; transform: scaleY(1); } }
+@keyframes dossier-enter { from { transform: translateX(60px); opacity: .3; } to { transform: none; opacity: 1; } }
+html.motion-paused .scroll-reveal, html.motion-paused .title-line > span { opacity: 1; transform: none; }
+html.motion-paused .diagram-holo { transform: none !important; }
+html.motion-paused *, html.motion-paused *::before, html.motion-paused *::after { animation: none !important; transition: none !important; }
+html.motion-paused .page::before { opacity: 0; }
+@media(max-width:1000px) { .method-panel { grid-template-columns: 1fr; gap: 25px; }.method-diagram { min-height: 295px; max-width: 540px; width: 100%; margin-inline: auto; }.area-crosslink { flex-wrap: wrap; gap: 10px; }.area-crosslink > span { width: 100%; } }
+@media(max-width:650px) { .terrain { height: 205px; bottom: -15px; }.group-heading { gap: 13px; }.group-heading h3 { font-size: 14px; }.group-heading p { font-size: 10px; }.group-heading > span { font-size: 8px; }.discipline-group { margin-top: 30px; }.method-panel { padding-top: 28px; }.method-diagram { min-height: 250px; padding-inline: 10px; }.method-diagram .diagram-label { font-size: 6px; }.diagram-legend { font-size: 5px; gap: 6px; }.sidebar { padding-top: 22px; }.sidebar nav a { padding-block: 12px; } }
+@media(prefers-reduced-motion:reduce) { .scroll-reveal, .title-line > span { opacity: 1 !important; transform: none !important; }.diagram-holo { transform: none !important; }.page::before { opacity: 0; }*,*::before,*::after { animation: none !important; transition: none !important; } }
+@media(forced-colors:active) { .cover h1 > .title-line:last-child > span { color: CanvasText; background: none; } }
+
+.method-diagram:not(.in-view) .diagram-holo { transform: none; transition: none; }

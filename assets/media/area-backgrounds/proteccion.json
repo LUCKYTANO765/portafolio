@@ -1,0 +1,18 @@
+{
+  "area": "proteccion",
+  "file": "proteccion.mp4",
+  "bytes": 2825533,
+  "resolution": [
+    1920,
+    1080
+  ],
+  "durationSeconds": 12,
+  "fps": 24,
+  "codec": "H.264/AVC",
+  "audio": false,
+  "fastStart": true,
+  "loopEndpointMaxPixelDelta": 0,
+  "loopEndpointMeanPixelDelta": 0,
+  "motionMean": 0.5370474858539095,
+  "posterSha256": "8b0f36fe185df0655a7e390c7634401796e32a5abb230d58f2d456feb5bf8ab8"
+}

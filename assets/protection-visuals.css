@@ -1,0 +1,132 @@
+/* Editorial scenes: movement explains the review, while the resting scene stays complete. */
+.protection-scene {
+  --ps-amber: var(--accent, #f5a267);
+  --ps-teal: #9ab7af;
+  --ps-ink: #e6e3da;
+  --ps-stroke: #739088;
+  --ps-dark: #141b1f;
+  --ps-panel: #252e34;
+  width: 100%;
+  max-width: 860px;
+  margin-inline: auto;
+  isolation: isolate;
+}
+.protection-scene .ps-illustration { display: block; width: 100%; height: auto; aspect-ratio: 18 / 11; overflow: visible; }
+.protection-scene .ps-line { fill: none; stroke: var(--ps-stroke); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.protection-scene .ps-surface { fill: var(--ps-dark); stroke: var(--ps-stroke); stroke-width: 2; }
+.protection-scene .ps-backdrop { fill: #91b1a7; opacity: .035; }
+.protection-scene .ps-amber { stroke: var(--ps-amber); }
+.protection-scene .ps-teal { stroke: var(--ps-teal); }
+.protection-scene .ps-ground { stroke: #3d504a; stroke-width: 1.5; }
+.protection-scene .ps-label { fill: var(--ps-ink); font: 23px var(--sans, sans-serif); letter-spacing: -.3px; }
+.protection-scene .ps-detail-label { font-size: 18px; letter-spacing: -.1px; }
+.protection-scene .ps-permission-choice { fill: var(--ps-amber); animation: ps-permission-review 4s ease-in-out var(--ps-delay, 0ms) infinite; }
+@keyframes ps-permission-review { 0%, 100% { opacity: .55; } 50% { opacity: 1; } }
+.protection-scene .ps-device { fill: #252e34; stroke: #a1b0b6; }
+.protection-scene .ps-screen { fill: #10171b; stroke: #4c5d66; stroke-width: 1.4; }
+.protection-scene .ps-device-detail { stroke: #9ab7af; stroke-width: 1.5; }
+.protection-scene .ps-device-camera { fill: #9ab7af; }
+.protection-scene .ps-panel { fill: #202d35; stroke: #475c68; stroke-width: 1.2; }
+.protection-scene .ps-interface-line { stroke: #a6bdb1; stroke-width: 2; opacity: .7; }
+.protection-scene .ps-laptop-base { fill: #34414a; stroke: #a1b0b6; stroke-width: 2; stroke-linejoin: round; }
+.protection-scene .ps-toggle { fill: #a0744c; stroke: var(--ps-amber); stroke-width: 1.4; }
+.protection-scene .ps-toggle-muted { fill: #293c33; stroke: #789283; stroke-width: 1.4; }
+.protection-scene .ps-lock { fill: #2b271f; stroke: var(--ps-amber); }
+.protection-scene .ps-paper { fill: #253039; stroke: #94a7b1; stroke-width: 1.5; stroke-linejoin: round; }
+.protection-scene .ps-paper-line { stroke: #a4b3bb; stroke-width: 2; }
+.protection-scene .ps-paper-accent { stroke: var(--ps-amber); stroke-width: 3; }
+.protection-scene .ps-desk { fill: #34473b; stroke: #6e8475; }
+.protection-scene .ps-table-leg { stroke: #758b7d; stroke-width: 7; }
+.protection-scene .ps-handset { fill: #24352c; stroke: #c0cabb; stroke-width: 1.3; }
+.protection-scene .ps-lens-glass { fill: #d6e9e1; fill-opacity: .075; stroke: var(--ps-amber); stroke-width: 5; }
+.protection-scene .ps-lens-inner { stroke: #a6c5b6; stroke-width: 1; opacity: .5; }
+.protection-scene .ps-lens-handle { stroke: var(--ps-amber); stroke-width: 12; }
+.protection-scene .ps-glass-glint { stroke: #d4e2d8; stroke-width: 2.5; opacity: .75; }
+.protection-scene .ps-route { stroke: #79968b; stroke-width: 1.5; stroke-dasharray: 4 7; opacity: .6; }
+.protection-scene .ps-route-review { fill: none; stroke: var(--ps-amber); stroke-width: 2.8; stroke-linecap: round; stroke-dasharray: 17 83; stroke-dashoffset: 0; opacity: .65; animation: ps-trace-review 7s linear var(--ps-delay, 0ms) infinite; }
+.protection-scene .ps-review-band { fill: var(--ps-amber); opacity: .1; }
+.protection-scene .ps-channel { fill: #263b30; fill-opacity: .32; stroke: #4b6759; stroke-dasharray: 5 9; stroke-width: 1.5; }
+.protection-scene .ps-channel-line { stroke: #50675d; stroke-width: 1; }
+.protection-scene .ps-channel-seal { fill: #18241c; stroke: #668374; stroke-width: 1.5; }
+.protection-scene .ps-message { fill: #9ebaae; stroke: #c0cdc3; stroke-width: 1.5; stroke-linejoin: round; }
+.protection-scene .ps-message-line { stroke: #3a5547; stroke-width: 2; }
+.protection-scene .ps-message-incoming .ps-message { fill: #bc9270; stroke: #d6b599; }
+.protection-scene .ps-map { fill: #1c272e; stroke: #657884; }
+.protection-scene .ps-map-street { stroke: #739080; stroke-width: 12; opacity: .17; }
+.protection-scene .ps-map-river { stroke: #668f87; stroke-width: 17; opacity: .32; }
+.protection-scene .ps-map-block { fill: #2f414a; stroke: #566c79; stroke-width: 1; }
+.protection-scene .ps-photo-card { fill: #d3d4c7; stroke: #94a699; stroke-width: 1.4; }
+.protection-scene .ps-photo-frame { fill: #a5b7a6; stroke: #7f9380; stroke-width: 1; }
+.protection-scene .ps-photo-mountain { fill: #527464; }
+.protection-scene .ps-photo-sun { fill: #dbbb8b; }
+.protection-scene .ps-pin { fill: #bd875c; stroke: #e5b18a; stroke-width: 2; }
+.protection-scene .ps-pin-center { fill: #263a2d; stroke: #efc2a1; stroke-width: 1.5; }
+.protection-scene .ps-room { fill: #17211b; stroke: #58695b; stroke-width: 1.5; }
+.protection-scene .ps-room-line { stroke: #3f5144; }
+.protection-scene .ps-window { fill: #283c30; stroke: #718777; }
+.protection-scene .ps-window-line { stroke: #8ca18e; stroke-width: 3; }
+.protection-scene .ps-window-view { stroke: #61856b; stroke-width: 10; opacity: .55; }
+.protection-scene .ps-door { fill: #29372b; stroke: #5d7561; stroke-width: 1.5; }
+.protection-scene .ps-meeting-table { fill: #28353d; stroke: #95a8b1; stroke-width: 2; }
+.protection-scene .ps-chair { fill: #202b31; stroke: #6f858f; stroke-width: 1.5; }
+.protection-scene .ps-floorplan { stroke: #a1b3bc; stroke-width: 3; stroke-linecap: square; }
+.protection-scene .ps-door-swing { stroke: #6f858f; stroke-width: 1.5; }
+.protection-scene .ps-microphone-stand { stroke: #b9c9b9; stroke-width: 4; }
+.protection-scene .ps-microphone { fill: #2e3a31; stroke: #bac8b6; stroke-width: 1.5; }
+.protection-scene .ps-microphone-base { fill: #26382b; stroke: #afc2aa; stroke-width: 1.5; }
+.protection-scene .ps-access-disc { fill: #1c2920; stroke: #88a28e; stroke-width: 1.5; }
+.protection-scene .ps-folder-back { fill: #253039; stroke: #91a3ad; stroke-width: 2; }
+.protection-scene .ps-folder { fill: #35454f; stroke: #a4b4bc; stroke-width: 2; stroke-linejoin: round; }
+.protection-scene .ps-folder-tear { stroke: var(--ps-amber); stroke-width: 2; }
+.protection-scene .ps-archive-back { fill: #344b3a; stroke: #819d82; stroke-width: 1.5; }
+.protection-scene .ps-evidence-tab { fill: #cbcdbd; stroke: #879b85; stroke-width: 1.5; }
+.protection-scene .ps-archive-front { fill: #486851; stroke: #94b092; stroke-width: 2; stroke-linejoin: round; }
+.protection-scene .ps-archive-label { fill: #c3c9b7; stroke: #87967b; stroke-width: 1; }
+
+.protection-scene .ps-enter { opacity: 1; animation: ps-appear 700ms ease var(--ps-delay, 0ms) both; }
+.protection-scene .ps-device-review { animation: ps-device-review 7s ease-in-out 900ms infinite; }
+.protection-scene .ps-device-lens { animation: ps-device-lens 7s ease-in-out 900ms infinite; }
+.protection-scene .ps-message-outgoing { animation: ps-message-outgoing 7.8s ease-in-out 900ms infinite; }
+.protection-scene .ps-message-incoming { animation: ps-message-incoming 7.8s ease-in-out 1400ms infinite; }
+.protection-scene .ps-location-clue { animation: ps-clue-review 8s ease-in-out 1s infinite; }
+.protection-scene .ps-location-lens { animation: ps-location-inspection 8s ease-in-out 1s infinite; }
+.protection-scene .ps-room-inspection { animation: ps-room-inspection 10s ease-in-out 1s infinite; }
+.protection-scene .ps-document-inspection { animation: ps-document-inspection 9s ease-in-out 1s infinite; }
+.protection-scene .ps-evidence-sheet { transform-box: fill-box; transform-origin: center; }
+.protection-scene .ps-evidence-one { animation: ps-evidence-sort-one 9s ease-in-out 1s infinite; }
+.protection-scene .ps-evidence-two { animation: ps-evidence-sort-two 9s ease-in-out 1700ms infinite; }
+
+.protection-illustration:not(.in-view) .protection-scene * { animation-play-state: paused !important; }
+
+@keyframes ps-appear { from { opacity: 0; transform: translateY(7px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes ps-trace-review { 0%, 12% { stroke-dashoffset: 17; opacity: .25; } 58% { stroke-dashoffset: -82; opacity: .85; } 75%, 100% { stroke-dashoffset: -100; opacity: .25; } }
+@keyframes ps-device-review { 0%, 100% { transform: translateY(-11px); } 48%, 65% { transform: translateY(67px); } }
+@keyframes ps-device-lens { 0%, 100% { transform: translate(0, -12px); } 48%, 65% { transform: translate(-3px, 27px); } }
+@keyframes ps-message-outgoing { 0%, 100% { transform: translateX(0); } 35%, 60% { transform: translateX(29px); } }
+@keyframes ps-message-incoming { 0%, 100% { transform: translateX(0); } 40%, 65% { transform: translateX(-26px); } }
+@keyframes ps-clue-review { 0%, 100% { opacity: .72; } 40%, 65% { opacity: 1; } }
+@keyframes ps-location-inspection { 0%, 100% { transform: translate(0, 0); } 40%, 65% { transform: translate(-43px, -30px); } }
+@keyframes ps-room-inspection { 0%, 100% { transform: translate(0, 0); } 35% { transform: translate(-103px, 6px); } 62%, 70% { transform: translate(-174px, -11px); } }
+@keyframes ps-document-inspection { 0%, 100% { transform: translate(0, 0); } 38%, 60% { transform: translate(-35px, -32px); } }
+@keyframes ps-evidence-sort-one {
+  0%, 8%, 100% { transform: translate(0, 0) rotate(-3deg); opacity: 1; }
+  47%, 65% { transform: translate(187px, 137px) scale(.7); opacity: 1; }
+  75% { transform: translate(187px, 137px) scale(.7); opacity: 0; }
+  76%, 86% { transform: translate(0, 0) rotate(-3deg); opacity: 0; }
+}
+@keyframes ps-evidence-sort-two {
+  0%, 8%, 100% { transform: translate(0, 0) rotate(2deg); opacity: 1; }
+  47%, 65% { transform: translate(168px, 73px) scale(.7); opacity: 1; }
+  75% { transform: translate(168px, 73px) scale(.7); opacity: 0; }
+  76%, 86% { transform: translate(0, 0) rotate(2deg); opacity: 0; }
+}
+
+/* Base properties always depict the full scene; removing animation reveals it. */
+html.motion-paused .protection-scene * { animation: none !important; transition: none !important; }
+html.motion-paused .protection-scene .ps-enter { opacity: 1; transform: none; }
+html.motion-paused .protection-scene .ps-route-review { stroke-dasharray: none; stroke-dashoffset: 0; opacity: .35; }
+@media (prefers-reduced-motion: reduce) {
+  .protection-scene * { animation: none !important; transition: none !important; }
+  .protection-scene .ps-enter { opacity: 1; transform: none; }
+  .protection-scene .ps-route-review { stroke-dasharray: none; stroke-dashoffset: 0; opacity: .35; }
+}

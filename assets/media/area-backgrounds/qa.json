@@ -1,0 +1,18 @@
+{
+  "area": "qa",
+  "file": "qa.mp4",
+  "bytes": 2508721,
+  "resolution": [
+    1920,
+    1080
+  ],
+  "durationSeconds": 12,
+  "fps": 24,
+  "codec": "H.264/AVC",
+  "audio": false,
+  "fastStart": true,
+  "loopEndpointMaxPixelDelta": 0,
+  "loopEndpointMeanPixelDelta": 0,
+  "motionMean": 0.39717367541152265,
+  "posterSha256": "568afb63425566d35cbeabb7b279a605ae05cca794bf12fd1f19609e12b655a8"
+}

@@ -1,0 +1,18 @@
+{
+  "area": "radiofrecuencia",
+  "file": "radiofrecuencia.mp4",
+  "bytes": 2935679,
+  "resolution": [
+    1920,
+    1080
+  ],
+  "durationSeconds": 12,
+  "fps": 24,
+  "codec": "H.264/AVC",
+  "audio": false,
+  "fastStart": true,
+  "loopEndpointMaxPixelDelta": 0,
+  "loopEndpointMeanPixelDelta": 0,
+  "motionMean": 0.5570908886316872,
+  "posterSha256": "d75827544d751bf5d0b24b4b1cec827061a56e8676e852c15f094b238cfbe84a"
+}

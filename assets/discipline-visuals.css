@@ -1,0 +1,142 @@
+/* Animated, original SVG studies. Movement is scoped to the visible illustration. */
+.diagram-holo {
+  --dv-mint: #9ab7af;
+  --dv-line: #60756e;
+  --dv-dim: #34483f;
+  --dv-paper: #101613;
+  position: relative;
+  width: 100%;
+  max-width: 540px;
+  margin-inline: auto;
+  transform-style: preserve-3d;
+  transform-origin: 50% 50%;
+}
+
+.diagram-holo .discipline-visual {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+  aspect-ratio: 3 / 2;
+}
+
+.diagram-holo .dv-line {
+  fill: none;
+  stroke: var(--dv-line);
+  stroke-width: 1.15;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.diagram-holo .dv-muted { stroke: var(--dv-mint); opacity: .65; }
+.diagram-holo .dv-dim { stroke: var(--dv-dim); }
+.diagram-holo .dv-dashed { stroke-dasharray: 3 5; }
+.diagram-holo .dv-accent { stroke: var(--accent, #f5a267); }
+.diagram-holo .dv-accent-border { stroke: var(--accent, #f5a267); stroke-opacity: .85; }
+.diagram-holo .dv-dot { fill: var(--dv-mint); }
+.diagram-holo .dv-accent-dot { fill: var(--accent, #f5a267); }
+.diagram-holo .dv-soft { opacity: .5; }
+.diagram-holo .dv-invisible { visibility: hidden; }
+.diagram-holo .dv-surface { fill: var(--dv-paper); stroke: var(--dv-line); stroke-width: 1.15; }
+.diagram-holo .dv-surface.dv-accent-border { stroke: var(--accent, #f5a267); }
+.diagram-holo .dv-dark { fill: #141d18; stroke: #3e5349; }
+.diagram-holo .dv-back-plane { fill: #122018; fill-opacity: .55; stroke: #3d5548; }
+.diagram-holo .dv-phone-frame { fill: #18201b; stroke: #8da99d; }
+.diagram-holo .dv-phone-screen { fill: #0e1411; }
+.diagram-holo .dv-label {
+  fill: var(--dv-mint);
+  font: 6.5px var(--mono, monospace);
+  letter-spacing: 1.2px;
+  opacity: .8;
+}
+.diagram-holo .dv-frame { opacity: .65; }
+.diagram-holo .dv-frame .dv-line { stroke: #3f5147; stroke-width: .8; }
+.diagram-holo .dv-gradient-accent { stop-color: var(--accent, #f5a267); }
+.diagram-holo .dv-route-base { stroke: #547166; stroke-width: 1.4; }
+.diagram-holo .dv-flow {
+  fill: none;
+  stroke: var(--accent, #f5a267);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 9 91;
+  stroke-dashoffset: 9;
+  opacity: .7;
+  animation: dv-flow 4.8s linear var(--dv-delay, 0ms) infinite;
+}
+.diagram-holo .dv-enter {
+  opacity: 1;
+  animation: dv-assemble 750ms cubic-bezier(.2,.7,.2,1) var(--dv-delay, 0ms) both;
+}
+.diagram-holo .dv-radar-sweep { transform-origin: 210px 140px; animation: dv-rotate 12s linear 600ms infinite; }
+.diagram-holo .dv-pulse-ring { transform-box: fill-box; transform-origin: center; animation: dv-ring 4.6s ease-in-out 1s infinite; }
+.diagram-holo .dv-node-idle { animation: dv-node-glow 5.8s ease-in-out var(--dv-delay, 0ms) infinite; }
+.diagram-holo .dv-radio-wave { animation: dv-radio 4s ease-out var(--dv-delay, 0ms) infinite; }
+.diagram-holo .dv-wave-outer { opacity: .6; }
+.diagram-holo .dv-phone-scan { animation: dv-scan 5.6s cubic-bezier(.5,0,.2,1) 800ms infinite; }
+.diagram-holo .dv-waveform { animation: dv-waveform 5s ease-in-out 1s infinite; }
+.diagram-holo .dv-memory-cell { fill: #223b2d; stroke: #597363; stroke-width: .7; }
+.diagram-holo .dv-memory-recover { fill: #6d4c32; stroke: var(--accent, #f5a267); animation: dv-recover 6s ease-in-out var(--dv-delay, 0ms) infinite; }
+.diagram-holo .dv-draw { stroke-dasharray: 100; stroke-dashoffset: 0; animation: dv-draw 1.2s ease .3s both; }
+.diagram-holo .dv-ui-cursor { animation: dv-cursor 7s ease-in-out 1s infinite; }
+.diagram-holo .dv-ui-tile { animation: dv-tile 6.2s ease-in-out 1s infinite; }
+.diagram-holo .dv-layer-idle { animation: dv-layer 6s ease-in-out var(--dv-delay, 0ms) infinite; }
+.diagram-holo .dv-drone-arm { stroke: #34483f; stroke-width: 9; }
+.diagram-holo .dv-drone-float { animation: dv-float 5.5s ease-in-out .7s infinite; }
+.diagram-holo .dv-rotor { animation: dv-rotate 2.6s linear .6s infinite; transform-origin: 0 0; }
+.diagram-holo .dv-rotor-reverse { animation-direction: reverse; }
+.diagram-holo .dv-rotor-blade { fill: var(--dv-mint); fill-opacity: .36; stroke: var(--dv-mint); stroke-width: .5; }
+.diagram-holo .dv-ground-shadow { fill: #62836c; opacity: .1; transform-box: fill-box; transform-origin: center; animation: dv-shadow 5.5s ease-in-out .7s infinite; }
+
+/* Paused outside the viewport; entry animations resume on first observation. */
+.method-diagram:not(.in-view) .diagram-holo * { animation-play-state: paused !important; }
+
+@keyframes dv-assemble {
+  from { opacity: 0; transform: translateY(9px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes dv-rotate { to { transform: rotate(360deg); } }
+@keyframes dv-flow {
+  0% { stroke-dashoffset: 9; opacity: 0; }
+  8% { opacity: .75; }
+  60% { stroke-dashoffset: -100; opacity: .75; }
+  68%, 100% { stroke-dashoffset: -100; opacity: 0; }
+}
+@keyframes dv-ring {
+  0%, 100% { transform: scale(1); opacity: .35; }
+  40% { transform: scale(1.35); opacity: .65; }
+  70% { transform: scale(1.5); opacity: .2; }
+}
+@keyframes dv-node-glow { 0%, 100% { opacity: .72; } 35%, 55% { opacity: 1; } }
+@keyframes dv-radio { 0%, 100% { opacity: .3; } 35% { opacity: .85; } 70% { opacity: .3; } }
+@keyframes dv-scan {
+  0%, 8% { transform: translateY(-6px); opacity: 0; }
+  16% { opacity: .8; }
+  60% { transform: translateY(106px); opacity: .7; }
+  68%, 100% { transform: translateY(106px); opacity: 0; }
+}
+@keyframes dv-waveform { 0%, 100% { opacity: .35; } 30%, 55% { opacity: .9; } }
+@keyframes dv-recover { 0%, 100% { fill-opacity: .3; stroke-opacity: .5; } 30%, 65% { fill-opacity: .9; stroke-opacity: 1; } }
+@keyframes dv-draw { from { stroke-dashoffset: 100; } to { stroke-dashoffset: 0; } }
+@keyframes dv-cursor {
+  0%, 15%, 100% { transform: translate(0, 0); }
+  40%, 65% { transform: translate(-30px, -17px); }
+}
+@keyframes dv-tile { 0%, 100% { opacity: .65; transform: translateY(0); } 45% { opacity: 1; transform: translateY(-2px); } }
+@keyframes dv-layer { 0%, 100% { transform: translateY(0); opacity: .75; } 45% { transform: translateY(-3px); opacity: 1; } }
+@keyframes dv-float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
+@keyframes dv-shadow { 0%, 100% { transform: scaleX(1); opacity: .1; } 50% { transform: scaleX(.88); opacity: .065; } }
+
+/* Animation removal must reveal a complete drawing, including before its entry. */
+html.motion-paused .diagram-holo { transform: none !important; transition: none !important; }
+html.motion-paused .diagram-holo * { animation: none !important; transition: none !important; }
+html.motion-paused .diagram-holo .dv-enter { opacity: 1; transform: none; }
+html.motion-paused .diagram-holo .dv-flow { stroke-dasharray: none; stroke-dashoffset: 0; opacity: .22; }
+html.motion-paused .diagram-holo .dv-phone-scan { opacity: .5; }
+
+@media (prefers-reduced-motion: reduce) {
+  .diagram-holo { transform: none !important; transition: none !important; }
+  .diagram-holo * { animation: none !important; transition: none !important; }
+  .diagram-holo .dv-enter { opacity: 1; transform: none; }
+  .diagram-holo .dv-flow { stroke-dasharray: none; stroke-dashoffset: 0; opacity: .22; }
+  .diagram-holo .dv-phone-scan { opacity: .5; }
+}

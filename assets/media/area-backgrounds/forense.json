@@ -1,0 +1,18 @@
+{
+  "area": "forense",
+  "file": "forense.mp4",
+  "bytes": 2788290,
+  "resolution": [
+    1920,
+    1080
+  ],
+  "durationSeconds": 12,
+  "fps": 24,
+  "codec": "H.264/AVC",
+  "audio": false,
+  "fastStart": true,
+  "loopEndpointMaxPixelDelta": 0,
+  "loopEndpointMeanPixelDelta": 0,
+  "motionMean": 0.4905108667695473,
+  "posterSha256": "1f9e741ff5dfd67e8bf1c9994634e3643201873bbe08655ce1b7d64ea444f444"
+}

@@ -1,0 +1,18 @@
+{
+  "area": "automatizacion",
+  "file": "automatizacion.mp4",
+  "bytes": 2995866,
+  "resolution": [
+    1920,
+    1080
+  ],
+  "durationSeconds": 12,
+  "fps": 24,
+  "codec": "H.264/AVC",
+  "audio": false,
+  "fastStart": true,
+  "loopEndpointMaxPixelDelta": 0,
+  "loopEndpointMeanPixelDelta": 0,
+  "motionMean": 0.6985161072530864,
+  "posterSha256": "f72f3f8a51c17a3d120922a4ce50b40b19e2b0cd185b184845962541e9415f11"
+}

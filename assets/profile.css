@@ -1,0 +1,26 @@
+.profile-actions{display:flex;flex-wrap:wrap;align-items:center;gap:22px;margin-top:32px}
+.profile-whatsapp{display:inline-flex;align-items:center;gap:10px;font-size:12px;line-height:1.6}
+.profile-whatsapp img{flex-shrink:0}
+.profile-facts dd{overflow-wrap:anywhere}
+.profile-capabilities{margin-top:80px}
+.profile-capabilities-heading{max-width:660px;margin-bottom:40px}
+.profile-capabilities-heading h2,.profile-work h2{font-size:clamp(24px,3vw,36px);font-weight:500;letter-spacing:-1px;line-height:1.2;margin:16px 0}
+.profile-capabilities-heading>p:last-child,.profile-work p{color:var(--muted);font-size:14px;line-height:1.8}
+.profile-area-group{margin-top:40px}
+.profile-area-group>header{display:flex;align-items:baseline;gap:18px;padding:20px 0;border-top:1px solid var(--line)}
+.profile-area-group>header>span{font:10px var(--mono);color:var(--accent)}
+.profile-area-group h3{font-size:19px;font-weight:500;margin:0;letter-spacing:-.3px}
+.profile-capability-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.profile-capability{padding:26px;background:rgba(139,164,146,.035);border:1px solid var(--line);min-width:0}
+.profile-capability h4{margin:0 0 16px;font-size:18px;font-weight:500;line-height:1.45;letter-spacing:-.3px}
+.profile-capability h4 a{display:flex;justify-content:space-between;align-items:baseline;gap:16px}
+.profile-capability h4 span{color:var(--accent);font-size:14px}
+.profile-capability>p{color:#b2b9a9;font-size:14px;line-height:1.9;margin:0 0 22px}
+.profile-service-links{list-style:none;display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0}
+.profile-service-links a{display:inline-flex;align-items:center;gap:8px;padding:8px 10px;border:1px solid var(--line);font-size:11px;line-height:1.5;color:#c3cab8}
+.profile-service-links a:hover,.profile-service-links a:focus-visible{border-color:var(--accent);color:var(--ink);background:rgba(235,164,105,.07)}
+.profile-service-links span{color:var(--accent)}
+.profile-work{margin-top:64px;padding-top:24px;border-top:1px solid var(--line);max-width:760px}
+@media(min-width:1101px){.profile-capability:last-child:nth-child(odd){grid-column:1/-1}.profile-capability:last-child:nth-child(odd)>p{max-width:850px}}
+@media(max-width:1100px){.profile-capability-grid{grid-template-columns:1fr}}
+@media(max-width:650px){.profile-capabilities{margin-top:50px}.profile-capability{padding:20px}.profile-capability h4{font-size:17px}.profile-area-group h3{font-size:17px}.profile-actions{align-items:flex-start;flex-direction:column}}

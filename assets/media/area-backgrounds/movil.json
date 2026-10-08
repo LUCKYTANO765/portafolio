@@ -1,0 +1,18 @@
+{
+  "area": "movil",
+  "file": "movil.mp4",
+  "bytes": 2713405,
+  "resolution": [
+    1920,
+    1080
+  ],
+  "durationSeconds": 12,
+  "fps": 24,
+  "codec": "H.264/AVC",
+  "audio": false,
+  "fastStart": true,
+  "loopEndpointMaxPixelDelta": 0,
+  "loopEndpointMeanPixelDelta": 0,
+  "motionMean": 0.48310169110082307,
+  "posterSha256": "c386eb769da230282d2e520aa13b7e4977df42873b124725a4cf7dc6801d3ef3"
+}

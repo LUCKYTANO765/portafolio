@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560" fill="none"><defs><pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" stroke="#2e4652" stroke-width=".7"/></pattern></defs><path fill="#0e171d" d="M0 0h800v560H0z"/><path fill="url(#grid)" opacity=".34" d="M0 0h800v560H0z"/><g stroke="#45616d" stroke-width="1"><path d="M48 78V48h30M722 48h30v30M48 482v30h30m644 0h30v-30"/><path d="M48 280h12m680 0h12M400 48v12m0 440v12"/></g>
+<defs><clipPath id="shield"><path d="M400 111c48 27 94 40 151 48v128c0 77-71 131-151 174-80-43-151-97-151-174V159c57-8 103-21 151-48Z"/></clipPath></defs>
+<circle cx="400" cy="280" r="216" stroke="#2e4652" stroke-dasharray="3 8"/><circle cx="400" cy="280" r="187" stroke="#45616d"/>
+<path d="M400 111c48 27 94 40 151 48v128c0 77-71 131-151 174-80-43-151-97-151-174V159c57-8 103-21 151-48Z" fill="#14272b" stroke="#bbf451" stroke-width="1.7"/>
+<g clip-path="url(#shield)" stroke="#3b5c4b" stroke-width="1"><path d="M275 100v360m25-360v360m25-360v360m25-360v360m25-360v360m25-360v360m25-360v360m25-360v360m25-360v360m25-360v360m25-360v360M230 161h340m-340 25h340m-340 25h340m-340 25h340m-340 25h340m-340 25h340m-340 25h340m-340 25h340m-340 25h340m-340 25h340m-340 25h340m-340 25h340"/><path d="m235 461 330-330M235 361l230-230M335 461l230-230" stroke="#557947"/></g>
+<path d="M400 132c41 21 86 36 131 43v111c0 62-60 111-131 151-71-40-131-89-131-151V175c45-7 90-22 131-43Z" stroke="#52704e"/>
+<path d="M169 284h462" stroke="#54c9da" stroke-width="1.5"/><path d="M169 279v10m462-10v10" stroke="#54c9da"/><path d="M249 284h302" stroke="#54c9da" stroke-width="5" stroke-opacity=".13"/>
+<rect x="350" y="249" width="100" height="92" rx="5" fill="#16252e" stroke="#bbf451" stroke-width="1.5"/><path d="M368 249v-25a32 32 0 0 1 64 0v25" stroke="#bbf451" stroke-width="2.5"/><circle cx="400" cy="285" r="9" stroke="#bbf451" stroke-width="2"/><path d="M400 294v17" stroke="#bbf451" stroke-width="2"/>
+<path d="M197 198v-63h67m272 0h67v63M197 362v63h67m272 0h67v-63" stroke="#45616d" stroke-width="1.5"/>
+<g fill="#16252e" stroke="#54c9da"><rect x="146" y="190" width="61" height="44" rx="3"/><rect x="593" y="348" width="61" height="44" rx="3"/></g><path d="m163 211 8 8 17-18m421 168 8 8 17-18" stroke="#bbf451" stroke-width="2"/>
+<g fill="#54c9da"><circle cx="603" cy="135" r="3"/><circle cx="197" cy="425" r="3"/><circle cx="551" cy="284" r="4"/><circle cx="249" cy="284" r="4"/></g>
+</svg>

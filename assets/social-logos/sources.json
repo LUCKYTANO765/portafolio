@@ -1,0 +1,48 @@
+{
+  "source": "Simple Icons",
+  "repository": "https://github.com/simple-icons/simple-icons",
+  "license": "CC0-1.0",
+  "retrieved": "2026-10-06",
+  "icons": [
+    {
+      "name": "facebook",
+      "url": "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/facebook.svg"
+    },
+    {
+      "name": "instagram",
+      "url": "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/instagram.svg"
+    },
+    {
+      "name": "tiktok",
+      "url": "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/tiktok.svg"
+    },
+    {
+      "name": "youtube",
+      "url": "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/youtube.svg"
+    },
+    {
+      "name": "x",
+      "url": "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/x.svg"
+    },
+    {
+      "name": "whatsapp",
+      "url": "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/whatsapp.svg"
+    },
+    {
+      "name": "threads",
+      "url": "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/threads.svg"
+    },
+    {
+      "name": "linkedin",
+      "url": "https://raw.githubusercontent.com/simple-icons/simple-icons/13.0.0/icons/linkedin.svg"
+    }
+  ],
+  "platformReferences": [
+    "https://business.instagram.com/",
+    "https://ads.tiktok.com/business/",
+    "https://www.youtube.com/creators/",
+    "https://business.linkedin.com/advertise",
+    "https://whatsappbusiness.com/",
+    "https://business.x.com/en"
+  ]
+}

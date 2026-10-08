@@ -4,16 +4,26 @@
 [build]
   publish = "."
 
-# Cache largo para assets estáticos (mejor rendimiento)
+# Revalidar el CSS y JavaScript para que los cambios lleguen inmediatamente.
 [[headers]]
   for = "/style.css"
   [headers.values]
-    Cache-Control = "public, max-age=604800"
+    Cache-Control = "public, max-age=0, must-revalidate"
 
 [[headers]]
   for = "/script.js"
   [headers.values]
-    Cache-Control = "public, max-age=604800"
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/projects.js"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
 
 # Cabeceras de seguridad básicas
 [[headers]]

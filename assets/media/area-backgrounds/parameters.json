@@ -1,0 +1,243 @@
+{
+  "style": "Original isometric line illustrations, restrained cyan and copper on charcoal",
+  "durationSeconds": 12,
+  "fps": 24,
+  "resolution": [
+    1920,
+    1080
+  ],
+  "loop": "periodic sine and cosine, no duplicated closing frame",
+  "speed": "very slow, one ambient cycle per 12 seconds",
+  "easing": "sinusoidal ease-in-out",
+  "motion": {
+    "ambientLight": true,
+    "routeHighlights": true,
+    "backgroundDust": "12 faint points; maximum 6.4px displacement in 960px design space",
+    "parallax": false,
+    "water": false,
+    "clouds": false,
+    "people": false,
+    "mainObjectTransform": false
+  },
+  "source": "Original programmatic illustrations; attached images used only as visual references",
+  "mask": null,
+  "integration": "Lazy load with IntersectionObserver; muted, loop, playsinline; pause when hidden/offscreen; poster for reduced motion and data saving; object-fit contain",
+  "files": [
+    {
+      "area": "ciberseguridad",
+      "file": "ciberseguridad.mp4",
+      "bytes": 2854333,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "durationSeconds": 12,
+      "fps": 24,
+      "codec": "H.264/AVC",
+      "audio": false,
+      "fastStart": true,
+      "loopEndpointMaxPixelDelta": 0,
+      "loopEndpointMeanPixelDelta": 0,
+      "motionMean": 0.5316063850308642,
+      "posterSha256": "9621a113e5d9b8fefd1046618381131145d339de838568552d2dbf31b8af0acf"
+    },
+    {
+      "area": "inteligencia",
+      "file": "inteligencia.mp4",
+      "bytes": 3014629,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "durationSeconds": 12,
+      "fps": 24,
+      "codec": "H.264/AVC",
+      "audio": false,
+      "fastStart": true,
+      "loopEndpointMaxPixelDelta": 0,
+      "loopEndpointMeanPixelDelta": 0,
+      "motionMean": 0.7674376286008231,
+      "posterSha256": "b61eb6d379df6e7e0676d57834bf7fe3617db3e374be46b12b2349d91567b72d"
+    },
+    {
+      "area": "forense",
+      "file": "forense.mp4",
+      "bytes": 2788290,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "durationSeconds": 12,
+      "fps": 24,
+      "codec": "H.264/AVC",
+      "audio": false,
+      "fastStart": true,
+      "loopEndpointMaxPixelDelta": 0,
+      "loopEndpointMeanPixelDelta": 0,
+      "motionMean": 0.4905108667695473,
+      "posterSha256": "1f9e741ff5dfd67e8bf1c9994634e3643201873bbe08655ce1b7d64ea444f444"
+    },
+    {
+      "area": "radiofrecuencia",
+      "file": "radiofrecuencia.mp4",
+      "bytes": 2935679,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "durationSeconds": 12,
+      "fps": 24,
+      "codec": "H.264/AVC",
+      "audio": false,
+      "fastStart": true,
+      "loopEndpointMaxPixelDelta": 0,
+      "loopEndpointMeanPixelDelta": 0,
+      "motionMean": 0.5570908886316872,
+      "posterSha256": "d75827544d751bf5d0b24b4b1cec827061a56e8676e852c15f094b238cfbe84a"
+    },
+    {
+      "area": "web",
+      "file": "web.mp4",
+      "bytes": 2826088,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "durationSeconds": 12,
+      "fps": 24,
+      "codec": "H.264/AVC",
+      "audio": false,
+      "fastStart": true,
+      "loopEndpointMaxPixelDelta": 0,
+      "loopEndpointMeanPixelDelta": 0,
+      "motionMean": 0.514908532664609,
+      "posterSha256": "61ffa098885d24caeec3c98fc3e8dcdc1e81f199b16b6c660dd66ff7de48c576"
+    },
+    {
+      "area": "movil",
+      "file": "movil.mp4",
+      "bytes": 2713405,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "durationSeconds": 12,
+      "fps": 24,
+      "codec": "H.264/AVC",
+      "audio": false,
+      "fastStart": true,
+      "loopEndpointMaxPixelDelta": 0,
+      "loopEndpointMeanPixelDelta": 0,
+      "motionMean": 0.48310169110082307,
+      "posterSha256": "c386eb769da230282d2e520aa13b7e4977df42873b124725a4cf7dc6801d3ef3"
+    },
+    {
+      "area": "qa",
+      "file": "qa.mp4",
+      "bytes": 2508721,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "durationSeconds": 12,
+      "fps": 24,
+      "codec": "H.264/AVC",
+      "audio": false,
+      "fastStart": true,
+      "loopEndpointMaxPixelDelta": 0,
+      "loopEndpointMeanPixelDelta": 0,
+      "motionMean": 0.39717367541152265,
+      "posterSha256": "568afb63425566d35cbeabb7b279a605ae05cca794bf12fd1f19609e12b655a8"
+    },
+    {
+      "area": "automatizacion",
+      "file": "automatizacion.mp4",
+      "bytes": 2995866,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "durationSeconds": 12,
+      "fps": 24,
+      "codec": "H.264/AVC",
+      "audio": false,
+      "fastStart": true,
+      "loopEndpointMaxPixelDelta": 0,
+      "loopEndpointMeanPixelDelta": 0,
+      "motionMean": 0.6985161072530864,
+      "posterSha256": "f72f3f8a51c17a3d120922a4ce50b40b19e2b0cd185b184845962541e9415f11"
+    },
+    {
+      "area": "ia",
+      "file": "ia.mp4",
+      "bytes": 2613477,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "durationSeconds": 12,
+      "fps": 24,
+      "codec": "H.264/AVC",
+      "audio": false,
+      "fastStart": true,
+      "loopEndpointMaxPixelDelta": 0,
+      "loopEndpointMeanPixelDelta": 0,
+      "motionMean": 0.3626988490226337,
+      "posterSha256": "b01a8217d1fb1f99fdd690d72d1506abcae831317af8e874179a56acc3daa5ae"
+    },
+    {
+      "area": "drones",
+      "file": "drones.mp4",
+      "bytes": 2944331,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "durationSeconds": 12,
+      "fps": 24,
+      "codec": "H.264/AVC",
+      "audio": false,
+      "fastStart": true,
+      "loopEndpointMaxPixelDelta": 0,
+      "loopEndpointMeanPixelDelta": 0,
+      "motionMean": 0.592317226080247,
+      "posterSha256": "5f95230ac9c8c2f1d066474e6adb35e65de1d192b5f61605244f75f5640840ed"
+    },
+    {
+      "area": "comunicacion",
+      "file": "comunicacion.mp4",
+      "bytes": 2794572,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "durationSeconds": 12,
+      "fps": 24,
+      "codec": "H.264/AVC",
+      "audio": false,
+      "fastStart": true,
+      "loopEndpointMaxPixelDelta": 0,
+      "loopEndpointMeanPixelDelta": 0,
+      "motionMean": 0.5578526877572016,
+      "posterSha256": "f656a5d0654990d17b8ace5c547870c6fc290b623fef042c33ae4802b2624aa8"
+    },
+    {
+      "area": "proteccion",
+      "file": "proteccion.mp4",
+      "bytes": 2825533,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "durationSeconds": 12,
+      "fps": 24,
+      "codec": "H.264/AVC",
+      "audio": false,
+      "fastStart": true,
+      "loopEndpointMaxPixelDelta": 0,
+      "loopEndpointMeanPixelDelta": 0,
+      "motionMean": 0.5370474858539095,
+      "posterSha256": "8b0f36fe185df0655a7e390c7634401796e32a5abb230d58f2d456feb5bf8ab8"
+    }
+  ]
+}

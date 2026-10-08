@@ -1,0 +1,18 @@
+{
+  "area": "web",
+  "file": "web.mp4",
+  "bytes": 2826088,
+  "resolution": [
+    1920,
+    1080
+  ],
+  "durationSeconds": 12,
+  "fps": 24,
+  "codec": "H.264/AVC",
+  "audio": false,
+  "fastStart": true,
+  "loopEndpointMaxPixelDelta": 0,
+  "loopEndpointMeanPixelDelta": 0,
+  "motionMean": 0.514908532664609,
+  "posterSha256": "61ffa098885d24caeec3c98fc3e8dcdc1e81f199b16b6c660dd66ff7de48c576"
+}

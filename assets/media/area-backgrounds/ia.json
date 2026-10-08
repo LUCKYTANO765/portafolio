@@ -1,0 +1,18 @@
+{
+  "area": "ia",
+  "file": "ia.mp4",
+  "bytes": 2613477,
+  "resolution": [
+    1920,
+    1080
+  ],
+  "durationSeconds": 12,
+  "fps": 24,
+  "codec": "H.264/AVC",
+  "audio": false,
+  "fastStart": true,
+  "loopEndpointMaxPixelDelta": 0,
+  "loopEndpointMeanPixelDelta": 0,
+  "motionMean": 0.3626988490226337,
+  "posterSha256": "b01a8217d1fb1f99fdd690d72d1506abcae831317af8e874179a56acc3daa5ae"
+}

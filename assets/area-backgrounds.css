@@ -1,0 +1,71 @@
+/* Original area films accompany the introduction; text never sits over moving pixels. */
+.page-intro.has-area-background {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(0, 1fr);
+  column-gap: clamp(24px, 3vw, 48px);
+  align-items: start;
+  isolation: isolate;
+}
+.page-intro.has-area-background > .eyebrow,
+.page-intro.has-area-background > h1,
+.page-intro.has-area-background > .summary { grid-column: 1; min-width: 0; }
+.page-intro.has-area-background > .eyebrow { grid-row: 1; }
+.page-intro.has-area-background > h1 {
+  grid-row: 2;
+  font-size: clamp(36px, 3.65vw, 57px);
+  letter-spacing: -.055em;
+  overflow-wrap: normal;
+}
+.page-intro.has-area-background > .summary { grid-row: 3; font-size: 14px; }
+.page-intro.has-area-background > .intro-count { z-index: 1; }
+.area-background {
+  position: relative;
+  grid-column: 2;
+  grid-row: 1 / 4;
+  align-self: center;
+  width: 100%;
+  min-width: 0;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  pointer-events: none;
+  background: radial-gradient(ellipse at center, #18353145, transparent 73%);
+  -webkit-mask-image: radial-gradient(ellipse 72% 77% at 50% 50%, #000 56%, transparent 100%);
+  mask-image: radial-gradient(ellipse 72% 77% at 50% 50%, #000 56%, transparent 100%);
+}
+.area-background-poster,
+.area-background-video {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  filter: saturate(.78) brightness(.94);
+}
+.area-background-video { opacity: 0; transition: opacity .6s ease; }
+.area-background.has-frame:not(.is-still) .area-background-video { opacity: 1; }
+
+@media (max-width: 1100px) {
+  .page-intro.has-area-background { grid-template-columns: minmax(0, 1fr); }
+  .page-intro.has-area-background > h1 { font-size: clamp(42px, 5.2vw, 64px); }
+  .page-intro.has-area-background > .summary { max-width: 700px; }
+  .area-background {
+    grid-column: 1;
+    grid-row: 4;
+    width: min(100%, 620px);
+    justify-self: center;
+    margin-top: 24px;
+  }
+}
+@media (max-width: 650px) {
+  .page-intro.has-area-background > h1 { font-size: clamp(35px, 9.7vw, 47px); }
+  .page-intro.has-area-background > .summary { font-size: 13px; }
+  .area-background { margin-top: 19px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .area-background-video { opacity: 0 !important; transition: none; }
+}
+@media (forced-colors: active) {
+  .area-background { display: none; }
+}

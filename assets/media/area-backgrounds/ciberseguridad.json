@@ -1,0 +1,18 @@
+{
+  "area": "ciberseguridad",
+  "file": "ciberseguridad.mp4",
+  "bytes": 2854333,
+  "resolution": [
+    1920,
+    1080
+  ],
+  "durationSeconds": 12,
+  "fps": 24,
+  "codec": "H.264/AVC",
+  "audio": false,
+  "fastStart": true,
+  "loopEndpointMaxPixelDelta": 0,
+  "loopEndpointMeanPixelDelta": 0,
+  "motionMean": 0.5316063850308642,
+  "posterSha256": "9621a113e5d9b8fefd1046618381131145d339de838568552d2dbf31b8af0acf"
+}

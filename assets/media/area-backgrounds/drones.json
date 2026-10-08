@@ -1,0 +1,18 @@
+{
+  "area": "drones",
+  "file": "drones.mp4",
+  "bytes": 2944331,
+  "resolution": [
+    1920,
+    1080
+  ],
+  "durationSeconds": 12,
+  "fps": 24,
+  "codec": "H.264/AVC",
+  "audio": false,
+  "fastStart": true,
+  "loopEndpointMaxPixelDelta": 0,
+  "loopEndpointMeanPixelDelta": 0,
+  "motionMean": 0.592317226080247,
+  "posterSha256": "5f95230ac9c8c2f1d066474e6adb35e65de1d192b5f61605244f75f5640840ed"
+}

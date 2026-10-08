@@ -1,0 +1,18 @@
+{
+  "area": "comunicacion",
+  "file": "comunicacion.mp4",
+  "bytes": 2794572,
+  "resolution": [
+    1920,
+    1080
+  ],
+  "durationSeconds": 12,
+  "fps": 24,
+  "codec": "H.264/AVC",
+  "audio": false,
+  "fastStart": true,
+  "loopEndpointMaxPixelDelta": 0,
+  "loopEndpointMeanPixelDelta": 0,
+  "motionMean": 0.5578526877572016,
+  "posterSha256": "f656a5d0654990d17b8ace5c547870c6fc290b623fef042c33ae4802b2624aa8"
+}

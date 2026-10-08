@@ -1,0 +1,18 @@
+{
+  "area": "inteligencia",
+  "file": "inteligencia.mp4",
+  "bytes": 3014629,
+  "resolution": [
+    1920,
+    1080
+  ],
+  "durationSeconds": 12,
+  "fps": 24,
+  "codec": "H.264/AVC",
+  "audio": false,
+  "fastStart": true,
+  "loopEndpointMaxPixelDelta": 0,
+  "loopEndpointMeanPixelDelta": 0,
+  "motionMean": 0.7674376286008231,
+  "posterSha256": "b61eb6d379df6e7e0676d57834bf7fe3617db3e374be46b12b2349d91567b72d"
+}
