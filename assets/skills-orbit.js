@@ -12,7 +12,7 @@
     bots: ['Granjas de bots', 'Distribuir tareas, supervisar instancias y gestionar sus proxies.'],
     ia: ['Inteligencia artificial local', 'Configurar modelos y agentes para trabajar en un entorno propio.'],
     drones: ['Drones', 'Ensamblar, configurar y operar equipos de vuelo.'],
-    comunicacion: ['Comunicación digital', 'Organizar mensajes, contenidos y campañas en redes sociales.'],
+    comunicacion: ['Comunicación digital', 'Estrategia política, campañas electorales y aprobación de gobierno.'],
     proteccion: ['Protección personal', 'Cuidar dispositivos, conversaciones e información privada.'],
   };
   function markup() {
