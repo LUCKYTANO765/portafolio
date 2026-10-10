@@ -9,7 +9,7 @@
     movil: ['Desarrollo móvil', 'Construir aplicaciones para teléfonos con Flutter y Java.'],
     qa: ['QA y pruebas', 'Recorrer aplicaciones y comprobar que sus funciones respondan bien.'],
     automatizacion: ['Automatización', 'Conectar herramientas y procesos con n8n, APIs e IA.'],
-    bots: ['Granjas de bots', 'Distribuir tareas, supervisar instancias y gestionar sus proxies.'],
+    bots: ['Granjas de bots', 'Amplificar campañas políticas, inflar métricas y gestionar proxies.'],
     ia: ['Inteligencia artificial local', 'Configurar modelos y agentes para trabajar en un entorno propio.'],
     drones: ['Drones', 'Ensamblar, configurar y operar equipos de vuelo.'],
     comunicacion: ['Comunicación digital', 'Estrategia política, campañas electorales y aprobación de gobierno.'],

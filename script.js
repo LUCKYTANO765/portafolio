@@ -100,12 +100,12 @@ const disciplines = {
     ],
   },
   bots: {
-    number: '09', label: 'Granjas de bots', title: 'Coordinar tareas.\nSupervisar cada bot.',
-    summary: 'Infraestructura de bots para pruebas, procesamiento de datos y monitoreo de servicios propios o autorizados. Distribución de tareas, supervisión de instancias y proxies para controlar las conexiones de cada proceso.',
-    short: 'Instancias · Tareas · Proxies', stack: ['Granjas de bots', 'Proxies', 'Docker', 'Distribución de tareas', 'Monitoreo'],
+    number: '09', label: 'Granjas de bots', title: 'Impulsar campañas.\nEscalar aceptación.',
+    summary: 'Infraestructura de bots y automatización masiva aplicada a campañas políticas, candidatos y presencia pública. Construyo y coordino enjambres de cuentas e instancias diseñadas para inflar números de interacción, posicionar tendencias, amplificar el mensaje electoral y proyectar un masivo respaldo y aceptación ciudadana en redes sociales, gestionando proxies de alta rotación para mantener la operación continua e indetectable.',
+    short: 'Campañas políticas · Métricas · Proxies', stack: ['Granjas de bots', 'Campañas políticas', 'Inflado de métricas', 'Proxies rotativos', 'Percepción digital', 'Docker'],
     methods: [
-      { tab: 'Granjas de bots', id: 'granjas-de-bots', title: 'Coordinar varios bots desde un mismo lugar.', text: 'Una granja de bots reúne programas que ejecutan tareas automáticas. Preparo la infraestructura para repartir trabajo entre ellos, separar sus entornos y supervisar procesos como pruebas de aplicaciones, procesamiento de datos y monitoreo de servicios propios o autorizados.', bullets: ['Preparación de instancias y recursos de ejecución', 'Distribución de tareas con límites y control central', 'Seguimiento de errores, pausas y reinicios'], steps: ['INSTANCIAS', 'TAREAS', 'SUPERVISIÓN'] },
-      { tab: 'Proxies', id: 'proxies', title: 'Organizar por dónde pasan las conexiones.', text: 'Un proxy es un servidor intermediario entre una aplicación y el servicio al que se conecta. Configuro estos intermediarios para separar conexiones de distintos procesos, controlar quién puede utilizarlos y comprobar su disponibilidad.', bullets: ['Configuración de proxies y rutas de conexión', 'Control de acceso, destinos permitidos y límites de uso', 'Comprobación de respuestas y detección de fallos'], steps: ['CONEXIÓN', 'CONTROL', 'COMPROBACIÓN'] },
+      { tab: 'Granjas de bots', id: 'granjas-de-bots', title: 'Amplificación masiva y crecimiento en campaña.', text: 'Diseño, programo y despliego granjas de bots tácticas para campañas electorales y operaciones políticas. Coordino redes de instancias automatizadas capaces de inflar métricas de alcance, multiplicar reacciones, comentarios y retuits en minutos, posicionar tendencias estratégicas y fabricar una percepción de arrastre y aceptación multitudinaria que convence a votantes indecisos y condiciona el debate público.', bullets: ['Despliegue de instancias para inflar interacciones, reproducciones y volumen social', 'Coordinación táctica para imponer tendencias y empujar la narrativa de campaña', 'Supervisión centralizada, control de ritmo algorítmico y tolerancia a fallos'], steps: ['DESPLIEGUE', 'AMPLIFICACIÓN', 'CONTROL'] },
+      { tab: 'Proxies', id: 'proxies', title: 'Proxies rotativos para evasión y continuidad.', text: 'Un proxy residencial o dedicado es el escudo que permite a cada bot operar con una identidad, IP y ubicación geográfica independiente. Configuro redes de proxies con rotación continua para evitar suspensiones, eludir filtros algorítmicos en redes sociales y asegurar que la maquinaria de amplificación e inflado trabaje 24/7 sin caídas ni bloqueos.', bullets: ['Asignación de proxies residenciales y móviles por instancia y territorio', 'Rotación automática de IP y gestión de límites para evadir bloqueos', 'Comprobación continua de disponibilidad de nodos y sustitución en caliente'], steps: ['CONEXIÓN', 'ROTACIÓN', 'MONITOREO'] },
     ],
   },
   ia: {
@@ -239,7 +239,7 @@ function diagram(key, method, index) {
 function renderDiscipline(key, params = new URLSearchParams()) {
   const d = disciplines[key];
   const related = projects.filter(p => (projectAreas[p.id] || []).includes(key));
-  workspace.innerHTML = `<article class="page page-padding">${intro(d.number, `ÁREA DE TRABAJO / ${d.label}`, d.title, d.summary)}<div class="discipline-tabs" role="tablist" aria-label="Enfoques de ${esc(d.label)}">${d.methods.map((m, i) => `<button type="button" role="tab" id="method-tab-${i}" aria-controls="method-panel" aria-selected="${i === 0}" tabindex="${i === 0 ? 0 : -1}" data-method="${i}">${esc(m.tab)}</button>`).join('')}</div><div id="method-panel" class="method-panel" role="tabpanel" tabindex="0"></div>${key === 'forense' ? '<a class="area-crosslink" href="#ciberseguridad?enfoque=seguridad-movil"><span>PROTECCIÓN Y ACCESO</span>Seguridad móvil y GrapheneOS <b>↗</b></a><a class="area-crosslink" href="#ciberseguridad?enfoque=recuperacion-acceso"><span>RECUPERACIÓN DE ACCESO</span>Desbloqueo autorizado de teléfonos y computadoras <b>↗</b></a><a class="area-crosslink" href="#radiofrecuencia?enfoque=antenas"><span>LOCALIZACIÓN CELULAR</span>Análisis de ubicación mediante antenas <b>↗</b></a>' : key === 'ciberseguridad' ? '<a class="area-crosslink" href="#forense"><span>ANÁLISIS DE EVIDENCIAS</span>Informática forense y recuperación de datos <b>↗</b></a>' : ''}<div class="stack-line"><span>HERRAMIENTAS Y ENFOQUES</span>${tokens(d.stack)}</div><section class="related" aria-labelledby="related-title"><div class="section-line"><h2 id="related-title">Trabajo relacionado</h2><a href="#proyectos?area=${key}">Abrir archivo ↗</a></div><div id="related-projects"></div></section>${privacyNote()}</article>`;
+  workspace.innerHTML = `<article class="page page-padding">${intro(d.number, `ÁREA DE TRABAJO / ${d.label}`, d.title, d.summary)}<div class="discipline-tabs" role="tablist" aria-label="Enfoques de ${esc(d.label)}">${d.methods.map((m, i) => `<button type="button" role="tab" id="method-tab-${i}" aria-controls="method-panel" aria-selected="${i === 0}" tabindex="${i === 0 ? 0 : -1}" data-method="${i}">${esc(m.tab)}</button>`).join('')}</div><div id="method-panel" class="method-panel" role="tabpanel" tabindex="0"></div>${key === 'forense' ? '<a class="area-crosslink" href="#ciberseguridad?enfoque=seguridad-movil"><span>PROTECCIÓN Y ACCESO</span>Seguridad móvil y GrapheneOS <b>↗</b></a><a class="area-crosslink" href="#ciberseguridad?enfoque=recuperacion-acceso"><span>RECUPERACIÓN DE ACCESO</span>Desbloqueo autorizado de teléfonos y computadoras <b>↗</b></a><a class="area-crosslink" href="#radiofrecuencia?enfoque=antenas"><span>LOCALIZACIÓN CELULAR</span>Análisis de ubicación mediante antenas <b>↗</b></a>' : key === 'ciberseguridad' ? '<a class="area-crosslink" href="#forense"><span>ANÁLISIS DE EVIDENCIAS</span>Informática forense y recuperación de datos <b>↗</b></a>' : key === 'bots' ? '<a class="area-crosslink" href="#comunicacion?enfoque=campanas-en-redes"><span>OPERACIONES ELECTORALES</span>Campañas políticas, opinión pública y guerra digital <b>↗</b></a>' : ''}<div class="stack-line"><span>HERRAMIENTAS Y ENFOQUES</span>${tokens(d.stack)}</div><section class="related" aria-labelledby="related-title"><div class="section-line"><h2 id="related-title">Trabajo relacionado</h2><a href="#proyectos?area=${key}">Abrir archivo ↗</a></div><div id="related-projects"></div></section>${privacyNote()}</article>`;
   if (key === 'comunicacion') workspace.querySelector('#method-panel').insertAdjacentHTML('afterend', window.SocialPlatforms.markup());
   if (key === 'inteligencia') workspace.querySelector('.discipline-tabs').insertAdjacentHTML('beforebegin', protectionEntry());
   if (key === 'ciberseguridad' || key === 'forense' || key === 'radiofrecuencia') {
@@ -340,7 +340,7 @@ function renderProfile() {
     movil: ['Aplicaciones móviles', 'Desarrollo aplicaciones con Flutter y Java: pantallas, navegación, componentes y lógica de funcionamiento. Las conecto con servicios y APIs, cuidando los estados de carga, las respuestas y el tratamiento de errores.'],
     qa: ['QA y pruebas de software', 'Compruebo que una aplicación haga lo que necesita su usuario. Automatizo recorridos completos con Playwright, diseño pruebas funcionales, exploro casos límite y documento errores reproducibles. Después de un cambio, realizo pruebas de regresión para verificar que lo existente siga funcionando.'],
     automatizacion: ['Automatización de procesos', 'Conecto herramientas con n8n, APIs y webhooks. Organizo disparadores, secuencias y transformación de datos, e incorporo IA para apoyar tareas dentro de los procesos.'],
-    bots: ['Granjas de bots y proxies', 'Preparo instancias para ejecutar pruebas, procesar datos y monitorear servicios propios o autorizados. Distribuyo tareas y superviso errores, pausas y reinicios. Configuro proxies como parte de esta infraestructura para organizar conexiones, controlar accesos y comprobar su disponibilidad.'],
+    bots: ['Granjas de bots y amplificación política', 'Diseño y despliego infraestructura de bots para campañas electorales, figuras públicas y operaciones digitales. Coordino enjambres de cuentas programadas para inflar interacciones, posicionar tendencias y proyectar alta aceptación ciudadana. Configuro proxies rotativos para blindar la operación, evadir bloqueos y garantizar presencia masiva continua.'],
     ia: ['Inteligencia artificial local', 'Configuro modelos de lenguaje que funcionan en equipos e infraestructura propios, considerando los recursos disponibles. Conecto agentes con herramientas y procesos, preparo las entradas y evalúo sus resultados para que la IA apoye tareas concretas.'],
     drones: ['Diseño, construcción y operación de drones', 'Diseño y ensamblo drones desde sus componentes, integro sus sistemas y ajusto su configuración. Preparo y reviso el equipo antes del vuelo, realizo pruebas de funcionamiento, opero el dron y compruebo su estado después de utilizarlo.'],
     comunicacion: ['Estrategia política, campañas y gobierno', 'Diseño la estrategia de comunicación y narrativa política para candidatos, autoridades y equipos de gobierno. Construyo campañas electorales, discursos de alto impacto y despliegues digitales en redes sociales para elevar la aprobación ciudadana, ganar elecciones, neutralizar crisis y blindar la gestión pública frente a ataques de la oposición.']
@@ -353,23 +353,97 @@ function renderProfile() {
       : disciplines[key].methods.map(method => ({ label: method.tab, href: '#' + key + '?enfoque=' + methodId(method) }));
     return '<article class="profile-capability" data-profile-area="' + key + '"><h4><a href="#' + key + '">' + esc(title) + ' <span aria-hidden="true">↗</span></a></h4><p>' + esc(text) + '</p><ul class="profile-service-links" aria-label="Servicios de ' + esc(title) + '">' + links.map(link => '<li><a href="' + esc(link.href) + '">' + esc(link.label) + ' <span aria-hidden="true">↗</span></a></li>').join('') + '</ul></article>';
   };
-  workspace.innerHTML = '<article class="page page-padding profile-page">' +
-    intro('14', 'PERFIL / DETRÁS DEL TRABAJO', 'Dorian Joaquin\nFlores Burgoa.', 'Ingeniero informático en Bolivia. Desarrollo software, investigo y protejo información, automatizo procesos y conecto tecnología con comunicación digital.') +
-    '<div class="profile-layout"><div class="profile-copy">' +
-      '<p>Construir, comprobar y proteger. Así conecto mis áreas de trabajo.</p>' +
-      '<p>Trabajo en desarrollo web y móvil, calidad de software, ciberseguridad e investigación digital. Combino estas capacidades con automatización, inteligencia artificial local, radiofrecuencia, drones y estrategia de comunicación.</p>' +
-      '<p>Me interesa entender el problema completo: cómo se usa una aplicación, qué información necesita proteger una persona o qué proceso puede funcionar mejor. A partir de ahí, desarrollo la solución, compruebo su comportamiento y explico los resultados de forma clara.</p>' +
-      '<div class="profile-actions"><a href="resume.pdf" download="CV_Dorian_Joaquin_Flores_Burgoa.pdf" class="action-button">Descargar currículum <span aria-hidden="true">↓</span></a><a class="profile-whatsapp" href="https://wa.me/59178310899" target="_blank" rel="noopener noreferrer"><img src="assets/social-logos/whatsapp.svg" width="20" height="20" alt="">Conversemos por WhatsApp <span aria-hidden="true">↗</span></a></div>' +
-    '</div><dl class="profile-facts">' +
-      '<div><dt>Nombre completo</dt><dd>' + FULL_NAME + '</dd></div>' +
-      '<div><dt>Profesión / Ubicación</dt><dd>Ingeniero informático / Bolivia</dd></div>' +
-      '<div><dt>Desarrollo y calidad</dt><dd>JavaScript, Node.js, Java, Flutter, Docker, Git y Playwright.</dd></div>' +
-      '<div><dt>Automatización y protección</dt><dd>n8n, APIs, webhooks, modelos y agentes de IA local, proxies y GrapheneOS.</dd></div>' +
-      '<div><dt>Mi código</dt><dd><a href="https://github.com/LUCKYTANO765" target="_blank" rel="noopener noreferrer">github.com/LUCKYTANO765 ↗</a></dd></div>' +
-    '</dl></div>' +
-    '<section class="profile-capabilities" aria-labelledby="profile-capabilities-title"><header class="profile-capabilities-heading"><p class="eyebrow">CAPACIDADES / ÁREAS DE TRABAJO</p><h2 id="profile-capabilities-title">Lo que puedo aportar a tu proyecto.</h2><p>Explora cada área para conocer el proceso, las herramientas y el alcance de cada servicio.</p></header>' +
-      groups.map((group, index) => '<section class="profile-area-group" aria-labelledby="profile-group-' + index + '"><header><span aria-hidden="true">' + pad(index + 1) + '</span><h3 id="profile-group-' + index + '">' + esc(group.label) + '</h3></header><div class="profile-capability-grid">' + group.keys.map(capability).join('') + '</div></section>').join('') +
-    '</section><div class="profile-work"><h2>Proyectos públicos y trabajo confidencial.</h2><p>En mi GitHub comparto los proyectos que puedo publicar. Otros trabajos están sujetos a contratos y acuerdos de confidencialidad.</p><a class="method-reference" href="#proyectos">Explorar mis proyectos ↗</a></div>' + privacyNote() + '</article>';
+  workspace.innerHTML = `<article class="page page-padding profile-page">
+    ${intro('14', 'PERFIL / DETRÁS DEL TRABAJO', 'Dorian Joaquin\nFlores Burgoa.', 'Ingeniero informático en Bolivia. Desarrollo software, investigo y protejo información, automatizo procesos y conecto tecnología con comunicación digital.')}
+    <div class="profile-layout">
+      <div class="profile-copy">
+        <p class="profile-lead">Tecnología crítica, seguridad aplicada e impacto estratégico.</p>
+        <p>Vivimos en un momento donde la tecnología ha dejado de ser una simple herramienta de oficina para convertirse en el tejido que estructura la política, la seguridad, la economía y la vida diaria. Entender este entorno exige no fragmentar el conocimiento: un buen sistema no solo necesita código bien estructurado; requiere estar blindado contra amenazas, ser consciente del contexto regulatorio y social en el que opera, y poder explicarse con claridad a quienes toman decisiones.</p>
+        <p>Mi trabajo articula estas áreas en un enfoque integral organizado en tres dimensiones fundamentales:</p>
+
+        <div class="profile-pillars">
+          <article class="profile-pillar">
+            <header class="pillar-header">
+              <span class="pillar-num">01</span>
+              <h3>Ingeniería de software, calidad y automatización <small>/ Construir</small></h3>
+            </header>
+            <p>No concibo el desarrollo como simplemente hacer que las cosas «se vean bien», sino como la construcción de arquitecturas fiables, escalables y mantenibles:</p>
+            <ul class="pillar-list">
+              <li><strong>Desarrollo web y móvil:</strong> Creación de aplicaciones interactivas, fluidas y accesibles, con especial atención a la experiencia de usuario (UX) y a la solidez de los cimientos técnicos.</li>
+              <li><strong>Aseguramiento de calidad (QA) y pruebas:</strong> Metodologías rigurosas de testing y verificación funcional, automatizado y de regresión para garantizar que el software responda bajo condiciones reales de estrés.</li>
+              <li><strong>Automatización de procesos:</strong> Diseño de flujos automáticos que eliminan tareas repetitivas, optimizan tiempos de respuesta y reducen el margen de error humano en operaciones críticas.</li>
+            </ul>
+          </article>
+
+          <article class="profile-pillar">
+            <header class="pillar-header">
+              <span class="pillar-num">02</span>
+              <h3>Ciberseguridad, inteligencia digital y tecnologías de frontera <small>/ Proteger y explorar</small></h3>
+            </header>
+            <p>La seguridad y el análisis técnico son el filtro a través del cual evalúo cualquier sistema o flujo de información:</p>
+            <ul class="pillar-list">
+              <li><strong>Seguridad defensiva y análisis de vulnerabilidades:</strong> Evaluación proactiva de riesgos para proteger la privacidad de las personas, la integridad de los datos y la continuidad de las plataformas.</li>
+              <li><strong>Investigación digital y OSINT:</strong> Técnicas de recopilación y análisis de inteligencia en fuentes abiertas, mapeo de huellas digitales, detección de anomalías y análisis de manipulación informativa o comportamiento de bots.</li>
+              <li><strong>Inteligencia artificial local y privacidad:</strong> Despliegue e integración de modelos de lenguaje e inferencia ejecutados de forma local (on-premise/edge), garantizando soberanía de datos, privacidad estricta y autonomía respecto a infraestructuras externas.</li>
+              <li><strong>Hardware y espectro físico (radiofrecuencia y drones):</strong> Experimentación y uso aplicado de tecnologías tácticas: captura y análisis de señales por radiofrecuencia (RF/SDR), y diseño, ensamblaje y operación de aeronaves no tripuladas (drones) para recolección de datos y operaciones en terreno.</li>
+            </ul>
+          </article>
+
+          <article class="profile-pillar">
+            <header class="pillar-header">
+              <span class="pillar-num">03</span>
+              <h3>Análisis político, gobernanza y comunicación estratégica <small>/ Interpretar y comunicar</small></h3>
+            </header>
+            <p>El mejor análisis técnico pierde su valor si no se comprende el entorno humano o si nadie puede interpretar sus conclusiones:</p>
+            <ul class="pillar-list">
+              <li><strong>Contexto político y social:</strong> Comprensión profunda de la dinámica del poder, los marcos regulatorios, la soberanía tecnológica y el impacto social de la digitalización en el mundo real.</li>
+              <li><strong>Traducción técnica para la toma de decisiones:</strong> Capacidad probada para desgranar incidentes informáticos complejos, análisis de datos o amenazas cibernéticas y presentarlos en informes ejecutivos, claros y libres de jerga innecesaria.</li>
+              <li><strong>Estrategia y comunicación:</strong> Dominio del relato, la retórica visual y el diseño de mensajes para comunicar hallazgos, liderar consensos, neutralizar crisis o generar conciencia crítica frente a riesgos tecnológicos.</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="profile-methodology">
+          <div class="methodology-tag">METODOLOGÍA / EL CICLO COMPLETO</div>
+          <blockquote class="methodology-quote">
+            <span>Diagnosticar el contexto</span> <span aria-hidden="true">→</span>
+            <span>Construir la solución</span> <span aria-hidden="true">→</span>
+            <span>Auditar la seguridad</span> <span aria-hidden="true">→</span>
+            <span>Comunicar el impacto</span>
+          </blockquote>
+          <p>Me interesa entender el problema completo: desde cómo interactúa un usuario con una interfaz y qué vectores de ataque amenazan su privacidad, hasta cómo influye esa tecnología en una organización o comunidad. A partir de esa lectura global, desarrollo la herramienta adecuada, compruebo su comportamiento y entrego resultados transparentes, accionables y comprensibles.</p>
+        </div>
+
+        <div class="profile-actions">
+          <a href="resume.pdf" download="CV_Dorian_Joaquin_Flores_Burgoa.pdf" class="action-button">Descargar currículum <span aria-hidden="true">↓</span></a>
+          <a class="profile-whatsapp" href="https://wa.me/59178310899" target="_blank" rel="noopener noreferrer">
+            <img src="assets/social-logos/whatsapp.svg" width="20" height="20" alt="">Conversemos por WhatsApp <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </div>
+      <dl class="profile-facts">
+        <div><dt>Nombre completo</dt><dd>${FULL_NAME}</dd></div>
+        <div><dt>Profesión / Ubicación</dt><dd>Ingeniero informático / Bolivia</dd></div>
+        <div><dt>Desarrollo y calidad</dt><dd>JavaScript, Node.js, Java, Flutter, Docker, Git y Playwright.</dd></div>
+        <div><dt>Automatización y protección</dt><dd>n8n, APIs, webhooks, modelos y agentes de IA local, proxies y GrapheneOS.</dd></div>
+        <div><dt>Mi código</dt><dd><a href="https://github.com/LUCKYTANO765" target="_blank" rel="noopener noreferrer">github.com/LUCKYTANO765 ↗</a></dd></div>
+      </dl>
+    </div>
+    <section class="profile-capabilities" aria-labelledby="profile-capabilities-title">
+      <header class="profile-capabilities-heading">
+        <p class="eyebrow">CAPACIDADES / ÁREAS DE TRABAJO</p>
+        <h2 id="profile-capabilities-title">Lo que puedo aportar a tu proyecto.</h2>
+        <p>Explora cada área para conocer el proceso, las herramientas y el alcance de cada servicio.</p>
+      </header>
+      ${groups.map((group, index) => `<section class="profile-area-group" aria-labelledby="profile-group-${index}"><header><span aria-hidden="true">${pad(index + 1)}</span><h3 id="profile-group-${index}">${esc(group.label)}</h3></header><div class="profile-capability-grid">${group.keys.map(capability).join('')}</div></section>`).join('')}
+    </section>
+    <div class="profile-work">
+      <h2>Proyectos públicos y trabajo confidencial.</h2>
+      <p>En mi GitHub comparto los proyectos que puedo publicar. Otros trabajos están sujetos a contratos y acuerdos de confidencialidad.</p>
+      <a class="method-reference" href="#proyectos">Explorar mis proyectos ↗</a>
+    </div>
+    ${privacyNote()}
+  </article>`;
 }
 
 function renderContact() {
